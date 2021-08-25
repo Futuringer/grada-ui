@@ -1,4 +1,91 @@
-body 
-  {
-    color: green
+@import 'normalize';
+@import 'global';
+@import 'vars';
+
+@mixin logoCircle($gradient, $deg, $left, $top){
+  background: linear-gradient($gradient);
+  transform: rotate($deg);
+  left: $left;
+  top: $top;
+}
+
+.wrapper{
+  background-color: $dark;
+}
+
+.header{
+  background-color: $greyA;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
   }
+}
+
+.menu{
+  margin-left: auto;
+  &__list{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0 15px 0 0;
+    @extend %menuFont;
+  }
+  &__list-item{
+    margin-right:30px;
+  }
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  &__container{
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+  }
+  &__signature{
+    width: 76px;
+    height: 13px;
+  }
+  &__circle{
+    position: absolute;
+    border-radius: 100%;
+    width: 24px;
+    height:24px;
+  }
+  &__signature{
+    width: 67px;
+    height: 13px;
+    margin-left: 10px;
+  }
+  &__first-circle{
+    @include logoCircle($logoGradient1,-90deg,8px,0);
+  }
+  &__second-circle{
+    @include logoCircle($logoGradient2,0,16px,8px);
+  }
+  &__third-circle{
+    @include logoCircle($logoGradient1,90deg,8px,16px);
+  }
+  &__fourth-circle{
+    @include logoCircle($logoGradient2,180deg,0,8px);
+  }
+}
+
+.entrance-button {
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 9px 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  color: white;
+  text-transform: uppercase;
+}

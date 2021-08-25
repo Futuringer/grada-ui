@@ -50,11 +50,12 @@ function styles() {
       .pipe(
         autoprefixer({ overrideBrowserslist: ["last 5 versions"], grid: true })
       )
-      .pipe(
-        cleancss({
-          level: { 1: { specialComments: 0 } } /*, format: 'beautify'*/,
-        })
-      )
+			//пока закомменчу чтобы сравнивать css
+      //.pipe(
+        //cleancss({
+        //  level: { 1: { specialComments: 0 } } /*, format: 'beautify'*/,
+       // })
+    //  )
       .pipe(dest("app/css/"))
       .pipe(browserSync.stream())
   );
@@ -106,7 +107,7 @@ function cleandist() {
 function startwatch() {
   watch("app/**/" + preprocessor + "/**/*", styles);
   watch(["app/**/*.js", "!app/**/*.min.js"], scripts);
-  watch("app/**/*.html").on("chnge", browserSync.reload);
+  watch("app/**/*.html").on("change", browserSync.reload);
   watch("app/images/src/**/*", images);
 }
 
