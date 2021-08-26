@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -341,9 +342,93 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: "fontello";
+  src: url("../font/fontello.eot?40133631");
+  src: url("../font/fontello.eot?40133631#iefix") format("embedded-opentype"), url("../font/fontello.woff2?40133631") format("woff2"), url("../font/fontello.woff?40133631") format("woff"), url("../font/fontello.ttf?40133631") format("truetype"), url("../font/fontello.svg?40133631#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?40133631#fontello') format('svg');
+  }
+}
+*/
+[class^=icon-]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-menudomains:before {
+  content: "\e800";
+}
+
+/* '' */
+.icon-menunotifications:before {
+  content: "\e801";
+}
+
+/* '' */
+.icon-menuoverview:before {
+  content: "\e802";
+}
+
+/* '' */
+.icon-menusettings:before {
+  content: "\e803";
+}
+
+/* '' */
+.icon-menymywebsites:before {
+  content: "\e804";
+}
+
+/* '' */
+.icon-search:before {
+  content: "\e805";
+}
+
+/* '' */
+.icon-check:before {
+  content: "\e806";
+}
+
+/* '' */
 html,
 body {
   height: 100%;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .wrapper {
@@ -375,7 +460,7 @@ body {
   margin: 0 auto;
 }
 
-.menu__item-link {
+.user-name, .menu__item-link {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -405,10 +490,16 @@ body {
   min-height: 80px;
 }
 
-.menu {
+.menu_type_notlogged {
   margin-left: auto;
 }
+.menu_type_logged {
+  position: absolute;
+  left: calc(50% - 235px);
+}
 .menu__list {
+  position: relative;
+  top: 4px;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -435,6 +526,15 @@ body {
   bottom: -2px;
   border-radius: 1px;
 }
+.menu__divider {
+  display: none;
+  background-color: #30363D;
+  height: 100px;
+  width: 1px;
+  position: absolute;
+  right: -5px;
+  bottom: -21px;
+}
 .menu__item-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -450,12 +550,21 @@ body {
   text-decoration: none;
 }
 .menu__item-image {
-  display: none;
   width: 30px;
   height: 30px;
+  display: none;
+  font-size: 15px;
+}
+.menu__item-image::before {
+  position: relative;
+  left: 4px;
 }
 .menu__item-text {
   margin: 0;
+}
+.menu__item-logo {
+  color: #fff;
+  font-size: 12px;
 }
 
 .logo {
@@ -558,11 +667,139 @@ body {
 }
 
 .user-presentment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.check-mark {
+  position: relative;
+  top: -2px;
+  font-size: 13px;
+  margin: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#F27A54), color-stop(186.42%, #A154F2));
+  background: -o-linear-gradient(left, #F27A54 0%, #A154F2 186.42%);
+  background: linear-gradient(90deg, #F27A54 0%, #A154F2 186.42%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.user-name {
+  -webkit-text-decoration: uppercase;
+          text-decoration: uppercase;
+  margin: 0 10px 0 9px;
+}
+
+.user-logo__background {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-bottom: 2px;
-  border-right: 2px;
-  width: 8px;
-  height: 8px;
-  border-bottom: 1px solid green;
+  width: 30px;
+  height: 30px;
+  background: -webkit-gradient(linear, left top, right top, from(#F27A54), color-stop(186.42%, #A154F2));
+  background: -o-linear-gradient(left, #F27A54 0%, #A154F2 186.42%);
+  background: linear-gradient(90deg, #F27A54 0%, #A154F2 186.42%);
+  border-radius: 50%;
+  padding: 2px;
+}
+.user-logo__image {
+  width: 26px;
+  height: 26px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.search-button__container {
+  display: none;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin-right: 10px;
+  color: white;
+}
+.search-button__image {
+  font-size: 12px;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    padding: 0 70px;
+  }
+}
+@media (max-width: 950px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .header {
+    background-color: #3C444C;
+  }
+  .header__inner {
+    min-height: 100px;
+  }
+
+  .menu__item {
+    margin-right: 10px;
+  }
+  .menu_type_logged {
+    position: absolute;
+    left: calc(50% - 200px);
+  }
+}
+@media (max-width: 720px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .menu__item_type_active:after {
+    content: " ";
+    display: block;
+    background: -webkit-gradient(linear, left top, right top, from(#F27A54), color-stop(186.42%, #A154F2));
+    background: -o-linear-gradient(left, #F27A54 0%, #A154F2 186.42%);
+    background: linear-gradient(90deg, #F27A54 0%, #A154F2 186.42%);
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -2px;
+    left: 1px;
+    border-radius: 1px;
+  }
+  .menu__item-image {
+    position: relative;
+    left: -3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu__item-logo {
+    display: none;
+  }
+  .menu_type_logged {
+    position: absolute;
+    left: calc(50% - 155px);
+  }
+  .menu__divider {
+    display: block;
+  }
+
+  .check-mark {
+    display: none;
+  }
+
+  .user-name {
+    display: none;
+  }
+
+  .search-button__container {
+    display: block;
+  }
 }

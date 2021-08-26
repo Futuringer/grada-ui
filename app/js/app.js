@@ -1,5 +1,5 @@
 const btn = document.querySelector('#btn');
-const menuNotLogged = document.querySelector('.menu-type-notlogged');
+const menuNotLogged = document.querySelector('.menu_type_notlogged');
 const buttonsContainer = document.querySelector('.entrance-buttons-container')
 
 btn.onclick = function (e) {

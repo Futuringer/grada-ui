@@ -3,6 +3,10 @@ body {
   height: 100%;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;

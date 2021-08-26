@@ -1,4 +1,5 @@
 @import 'normalize';
+@import 'fontello';
 @import 'global';
 @import 'vars';
 
@@ -25,13 +26,24 @@
 }
 
 .menu {
-  margin-left: auto;
+
+  &_type_notlogged {
+    margin-left: auto;
+  }
+
+  &_type_logged {
+    position: absolute;
+    left: calc(50% - 235px);
+  }
 
   &__list {
+    position: relative;
+    top: 4px;
     list-style: none;
     display: flex;
     padding: 0;
     margin: 0 5px 0 0;
+
   }
 
   &__item {
@@ -40,20 +52,32 @@
     margin-right: 30px;
     padding-bottom: 7px;
 
-    &_type_active:after {
-      content: " ";
-      display: block;
-      background: linear-gradient($gradientOrangePink);
-      height: 2px;
-      width: 100%;
-      position: absolute;
-      bottom: -2px;
-      border-radius: 1px;
+    &_type_active {
+      &:after {
+        content: " ";
+        display: block;
+        background: linear-gradient($gradientOrangePink);
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        bottom: -2px;
+        border-radius: 1px;
+      }
     }
   }
 
+  &__divider {
+    display: none;
+    background-color: $dark;
+    height: 100px;
+    width: 1px;
+    position: absolute;
+    right: -5px;
+    bottom: -21px;
+  }
+
   &__item-link {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     list-style: none;
@@ -62,13 +86,24 @@
   }
 
   &__item-image {
-    display:none;
     width: 30px;
     height: 30px;
+    display: none;
+    font-size: 15px;
+    &::before {
+      position: relative;
+      left: 4px;
+    }
   }
+
 
   &__item-text {
     margin: 0;
+  }
+
+  &__item-logo {
+    color: #fff;
+    font-size: 12px;
   }
 }
 
@@ -133,17 +168,68 @@
   line-height: 12px;
   color: white;
   text-transform: uppercase;
-  &_type_active{
+
+  &_type_active {
     background: linear-gradient($gradientOrangePink);
     border: transparent;
   }
 }
 
 .user-presentment {
-  box-sizing: border-box;
-  border-bottom: 2px;
-  border-right: 2px;
-  width: 8px;
-  height: 8px;
-  border-bottom :1px solid green;
+  display: flex;
+  align-items: center
 }
+
+.check-mark {
+  position: relative;
+  top: -2px;
+  font-size: 13px;
+  margin: 0;
+  background: linear-gradient($gradientOrangePink);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.user-name {
+  @extend %menuFont;
+  text-decoration: uppercase;
+  margin: 0 10px 0 9px;
+}
+
+.user-logo {
+  &__background {
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient($gradientOrangePink);
+    border-radius: 50%;
+    padding: 2px;
+  }
+
+  &__image {
+    width: 26px;
+    height: 26px;
+    align-self: center;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.search-button {
+  &__container {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-right: 10px;
+    color: white;
+  }
+
+  &__image {
+    font-size: 12px;
+  }
+}
+
+@import 'media';
