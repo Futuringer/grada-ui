@@ -740,13 +740,6 @@ button:hover {
     padding: 0 20px;
   }
 
-  .header {
-    background-color: #3C444C;
-  }
-  .header__inner {
-    min-height: 100px;
-  }
-
   .menu__item {
     margin-right: 10px;
   }
@@ -789,6 +782,10 @@ button:hover {
   }
   .menu__divider {
     display: block;
+  }
+
+  .header__inner {
+    min-height: 100px;
   }
 
   .check-mark {

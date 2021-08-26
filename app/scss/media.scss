@@ -9,15 +9,6 @@
     padding: 0 20px;
   }
 
-  .header {
-    background-color: $greyA;
-
-    &__inner {
-      min-height: 100px;
-    }
-  }
-
-
   .menu {
     &__item {
       margin-right: 10px;
@@ -72,6 +63,12 @@
       display: block;
     }
 
+  }
+
+  .header {
+    &__inner {
+      min-height: 100px;
+    }
   }
 
   .check-mark {
