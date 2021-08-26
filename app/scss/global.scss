@@ -1,0 +1,28 @@
+html,
+body {
+  height: 100%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 1350px;
+  padding: 0 120px;
+  margin: 0 auto;
+}

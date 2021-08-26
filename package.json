@@ -20,6 +20,7 @@
     "gulp-imagemin": "^8.0.0",
     "gulp-less": "^5.0.0",
     "gulp-sass": "^5.0.0",
+    "gulp-sass-glob": "^1.1.0",
     "gulp-uglify-es": "^3.0.0",
     "pngquant-bin": "^6.0.0",
     "sass": "^1.38.1"

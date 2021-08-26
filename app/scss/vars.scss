@@ -1,0 +1,21 @@
+$greyA:#3C444C;
+$greyB:#747D88;
+$greyC:#CBCFD4;
+$dark:#30363D;
+$primary:#F27A54;
+$secondary:#A154F2;
+$tertiary:#6FCF97;
+
+%menuFont{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: $greyC;
+  text-transform: uppercase;
+}
+
+$logoGradient1: rgba(161, 84, 242, 0) 0%, $secondary 100%;
+$logoGradient2:  rgba(242, 122, 84, 0) 0%, $primary 100%;
+$gradientOrangePink: 90deg, $primary 0%, $secondary 186.42%;

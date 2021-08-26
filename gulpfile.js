@@ -11,7 +11,7 @@
 //npm -i save-dev gulp-imagemin  модуль для работы с изображениями
 //npm install compress-images --save-dev другой вариант модуля для работы с изображениями
 //npm i --save-dev compress-images gifsicle pngquant-bin del третий вариант модуля для работы с img
-let preprocessor = "sass";
+let preprocessor = "scss";
 
 const { src, dest, parallel, series, watch } = require("gulp");
 const browserSync = require("browser-sync").create(); //создаем новое подключение
@@ -44,17 +44,18 @@ function scripts() {
 function styles() {
   return (
     src("app/" + preprocessor + "/main." + preprocessor + "")
-      //.pipe(sass())//когда у нас один sass
-      .pipe(eval(preprocessor)())
+      .pipe(sass())//когда у нас один sass
+      //.pipe(eval(preprocessor)())
       .pipe(concat("app.min.css"))
       .pipe(
         autoprefixer({ overrideBrowserslist: ["last 5 versions"], grid: true })
       )
-      .pipe(
-        cleancss({
-          level: { 1: { specialComments: 0 } } /*, format: 'beautify'*/,
-        })
-      )
+			//пока закомменчу чтобы сравнивать css
+      //.pipe(
+        //cleancss({
+        //  level: { 1: { specialComments: 0 } } /*, format: 'beautify'*/,
+       // })
+    //  )
       .pipe(dest("app/css/"))
       .pipe(browserSync.stream())
   );
@@ -106,7 +107,7 @@ function cleandist() {
 function startwatch() {
   watch("app/**/" + preprocessor + "/**/*", styles);
   watch(["app/**/*.js", "!app/**/*.min.js"], scripts);
-  watch("app/**/*.html").on("chnge", browserSync.reload);
+  watch("app/**/*.html").on("change", browserSync.reload);
   watch("app/images/src/**/*", images);
 }
 
