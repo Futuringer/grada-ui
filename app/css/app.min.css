@@ -375,7 +375,7 @@ body {
   margin: 0 auto;
 }
 
-.menu__list {
+.menu__item-link {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -414,10 +414,48 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 0;
-  margin: 0 15px 0 0;
+  margin: 0 5px 0 0;
 }
-.menu__list-item {
+.menu__item {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-right: 30px;
+  padding-bottom: 7px;
+}
+.menu__item_type_active:after {
+  content: " ";
+  display: block;
+  background: -webkit-gradient(linear, left top, right top, from(#F27A54), color-stop(186.42%, #A154F2));
+  background: -o-linear-gradient(left, #F27A54 0%, #A154F2 186.42%);
+  background: linear-gradient(90deg, #F27A54 0%, #A154F2 186.42%);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: -2px;
+  border-radius: 1px;
+}
+.menu__item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  text-decoration: none;
+}
+.menu__item-image {
+  display: none;
+  width: 30px;
+  height: 30px;
+}
+.menu__item-text {
+  margin: 0;
 }
 
 .logo {
@@ -433,15 +471,21 @@ body {
   width: 40px;
   height: 40px;
 }
-.logo__signature {
-  width: 76px;
-  height: 13px;
-}
 .logo__circle {
   position: absolute;
   border-radius: 100%;
   width: 24px;
   height: 24px;
+}
+.logo__circle .logo__first-circle {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(161, 84, 242, 0)), to(#A154F2));
+  background: -o-linear-gradient(rgba(161, 84, 242, 0) 0%, #A154F2 100%);
+  background: linear-gradient(rgba(161, 84, 242, 0) 0%, #A154F2 100%);
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  left: 8px;
+  top: 0;
 }
 .logo__signature {
   width: 67px;
@@ -490,12 +534,14 @@ body {
 }
 
 .entrance-button {
+  margin-left: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: transparent;
   border: 1px solid white;
   border-radius: 20px;
-  padding: 9px 14px;
+  height: 30px;
+  padding: 0px 14px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -503,4 +549,20 @@ body {
   line-height: 12px;
   color: white;
   text-transform: uppercase;
+}
+.entrance-button_type_active {
+  background: -webkit-gradient(linear, left top, right top, from(#F27A54), color-stop(186.42%, #A154F2));
+  background: -o-linear-gradient(left, #F27A54 0%, #A154F2 186.42%);
+  background: linear-gradient(90deg, #F27A54 0%, #A154F2 186.42%);
+  border: transparent;
+}
+
+.user-presentment {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 2px;
+  border-right: 2px;
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid green;
 }

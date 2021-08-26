@@ -2,20 +2,21 @@
 @import 'global';
 @import 'vars';
 
-@mixin logoCircle($gradient, $deg, $left, $top){
+@mixin logoCircle($gradient, $deg, $left, $top) {
   background: linear-gradient($gradient);
   transform: rotate($deg);
   left: $left;
   top: $top;
 }
 
-.wrapper{
+.wrapper {
   background-color: $dark;
 }
 
-.header{
+.header {
   background-color: $greyA;
-  &__inner{
+
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,64 +24,108 @@
   }
 }
 
-.menu{
+.menu {
   margin-left: auto;
-  &__list{
+
+  &__list {
     list-style: none;
     display: flex;
     padding: 0;
-    margin: 0 15px 0 0;
-    @extend %menuFont;
+    margin: 0 5px 0 0;
   }
-  &__list-item{
-    margin-right:30px;
+
+  &__item {
+    position: relative;
+    box-sizing: border-box;
+    margin-right: 30px;
+    padding-bottom: 7px;
+
+    &_type_active:after {
+      content: " ";
+      display: block;
+      background: linear-gradient($gradientOrangePink);
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      bottom: -2px;
+      border-radius: 1px;
+    }
+  }
+
+  &__item-link {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    @extend %menuFont;
+    text-decoration: none;
+  }
+
+  &__item-image {
+    display:none;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__item-text {
+    margin: 0;
   }
 }
 
-.logo{
+.logo {
   display: flex;
   align-items: center;
-  &__container{
+  $logo: &;
+
+  &__container {
     position: relative;
 
     width: 40px;
     height: 40px;
   }
-  &__signature{
-    width: 76px;
-    height: 13px;
-  }
-  &__circle{
+
+  &__circle {
     position: absolute;
     border-radius: 100%;
     width: 24px;
-    height:24px;
+    height: 24px;
+
+    #{$logo}__first-circle {
+      @include logoCircle($logoGradient1, -90deg, 8px, 0);
+    }
   }
-  &__signature{
+
+  &__signature {
     width: 67px;
     height: 13px;
     margin-left: 10px;
   }
-  &__first-circle{
-    @include logoCircle($logoGradient1,-90deg,8px,0);
+
+  &__first-circle {
+    @include logoCircle($logoGradient1, -90deg, 8px, 0);
   }
-  &__second-circle{
-    @include logoCircle($logoGradient2,0,16px,8px);
+
+  &__second-circle {
+    @include logoCircle($logoGradient2, 0, 16px, 8px);
   }
-  &__third-circle{
-    @include logoCircle($logoGradient1,90deg,8px,16px);
+
+  &__third-circle {
+    @include logoCircle($logoGradient1, 90deg, 8px, 16px);
   }
-  &__fourth-circle{
-    @include logoCircle($logoGradient2,180deg,0,8px);
+
+  &__fourth-circle {
+    @include logoCircle($logoGradient2, 180deg, 0, 8px);
   }
 }
 
 .entrance-button {
+  margin-left: 10px;
   box-sizing: border-box;
   background-color: transparent;
   border: 1px solid white;
   border-radius: 20px;
-  padding: 9px 14px;
+  height: 30px;
+  padding: 0px 14px;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -88,4 +133,17 @@
   line-height: 12px;
   color: white;
   text-transform: uppercase;
+  &_type_active{
+    background: linear-gradient($gradientOrangePink);
+    border: transparent;
+  }
+}
+
+.user-presentment {
+  box-sizing: border-box;
+  border-bottom: 2px;
+  border-right: 2px;
+  width: 8px;
+  height: 8px;
+  border-bottom :1px solid green;
 }
