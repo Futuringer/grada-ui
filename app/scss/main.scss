@@ -1,7 +1,9 @@
+
 @import 'normalize';
 @import 'fontello';
 @import 'global';
 @import 'vars';
+
 
 @mixin logoCircle($gradient, $deg, $left, $top) {
   background: linear-gradient($gradient);
@@ -232,4 +234,37 @@
   }
 }
 
+.copyright {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: $greyC;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  &__item {
+
+  }
+
+  &__item-image {
+    &::before {
+      margin: 0 0 0 24px;
+      width:24px;
+      height: 24px;
+      font-size: 20px;
+      background: linear-gradient($gradientOrangePink);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      &:first-of-type{
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@import 'footer';
 @import 'media';
