@@ -1,4 +1,5 @@
 $greyA:#3C444C;
+$greyAopacity05: rgba(60, 68, 76,0.5);
 $greyB:#747D88;
 $greyC:#CBCFD4;
 $dark:#30363D;
@@ -6,7 +7,24 @@ $primary:#F27A54;
 $secondary:#A154F2;
 $tertiary:#6FCF97;
 
-%menuFont{
+
+%h3Font{
+  font-family: 'Zilla Slab', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+%h5Font {
+  font-family: 'Zilla Slab', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+%MontserratS1{
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -16,6 +34,17 @@ $tertiary:#6FCF97;
   text-transform: uppercase;
 }
 
+%MontserratS2{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: $greyC;
+}
+
+
 $logoGradient1: rgba(161, 84, 242, 0) 0%, $secondary 100%;
 $logoGradient2:  rgba(242, 122, 84, 0) 0%, $primary 100%;
 $gradientOrangePink: 90deg, $primary 0%, $secondary 186.42%;
+$gradientOrangePink2: 90deg, $primary 0%, $secondary 100%;

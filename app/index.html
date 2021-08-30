@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital@0;1&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/app.min.css">
 </head>
 
@@ -113,37 +115,215 @@
       </div>
     </header>
 
-        <!--<header class="header">
-          <div class="container">
-            <div class="header__inner">
-              <a class="logo" href="#">
-                <div class="logo__container">
-                  <div class="logo__circle logo__first-circle"></div>
-                  <div class="logo__circle logo__second-circle"></div>
-                  <div class="logo__circle logo__third-circle"></div>
-                  <div class="logo__circle logo__fourth-circle"></div>
-                </div>
-                <img class="logo__signature" src="../images/src/GRADA.png">
-                </img>
-              </a>
-
+    <main class="main">
+      <form>
+        <input type="radio" name="choice" value="yes" id="choice1">
+        <label for="choice-yes">1</label>
+        <input type="radio" name="choice" value="no" id="choice2">
+        <label for="choice-no">2</label>
+        <button id="btn">switch</button>
+      </form>
+      <ul class="widgets" >
+        <div class="grid1">
+          <div class="widget simple-text-widget">
+            <h3 class="widget__header">Simple Text Widget</h3>
+            <div class="widget__text">
+              <p class="widget__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus
+                egestas
+                elit, at eleifend elit ornare ut</p>
+              <p class="widget__paragraph">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                inceptos himenaeos.</p>
             </div>
+            <button class="gradient-button simple-text-widget__button">
+              <p class="gradient-button__text">find out more</p>
+              <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
+            </button>
           </div>
-        </header>-->
+        </div>
 
+        <div class="grid2">
+          <div class="widget article-widget">
+            <h3 class="widget__header">Article Widget</h3>
+            <ul class="article-widget__articles">
+              <li class="article-widget__article">
+                <img src="./images/src/imagemountains.jpg" alt="" class="article-widget__article-image">
+                <div class="article-widget__article-description">
+                  <p class="article-widget__article-category">Category</p>
+                  <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
+                  <p class="article-widget__article-date">Jan 13th, 2018</p>
+                </div>
+              </li>
+              <li class="article-widget__article">
+                <img src="./images/src/imagepolice-car.jpg" alt="" class="article-widget__article-image">
+                <div class="article-widget__article-description">
+                  <p class="article-widget__article-category">Category</p>
+                  <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
+                  <p class="article-widget__article-date">Jan 13th, 2018</p>
+                </div>
+              </li>
+              <li class="article-widget__article">
+                <img src="./images/src/imagewinterMountains.jpg" alt="" class="article-widget__article-image">
+                <div class="article-widget__article-description">
+                  <p class="article-widget__article-category">Category</p>
+                  <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
+                  <p class="article-widget__article-date">Jan 13th, 2018</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-        <form>
-          <input type="radio" name="choice" value="yes" id="choice1">
-          <label for="choice-yes">1</label>
-          <input type="radio" name="choice" value="no" id="choice2">
-          <label for="choice-no">2</label>
-          <button id="btn">switch</button>
-        </form>
+        <div class="grid3">
+          <div class="widget details-widget">
+            <h3 class="widget__header">Details Widget</h3>
 
-        <main class="main"></main>
-        <footer class="footer">footer</footer>
+            <ul class="details-widget__list">
+              <li class="details-widget__item">
+                <div class="details-widget__logo icon-group"></div>
+                <div class="details-widget__text-block">
+                  <h5 class="detaild-widget__text-header">Lorem Ipsum Dolor Amet</h5>
+                  <p class="article-widget__text">Lorem Ipsum</p>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="details-widget__list">
+              <li class="details-widget__item">
+                <div class="details-widget__logo icon-devices"></div>
+                <div class="details-widget__text-block">
+                  <h5 class="detaild-widget__text-header">Lorem Ipsum Dolor Amet</h5>
+                  <p class="article-widget__text">Lorem Ipsum</p>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="details-widget__list">
+              <li class="details-widget__item">
+                <div class="details-widget__logo icon-wallpaper"></div>
+                <div class="details-widget__text-block">
+                  <h5 class="detaild-widget__text-header">Lorem Ipsum Dolor Amet</h5>
+                  <p class="article-widget__text">Lorem Ipsum</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="widget article-widget">
+            <h3 class="widget__header">Article Widget</h3>
+            <ul class="article-widget__articles">
+              <li class="article-widget__article">
+                <img src="./images/src/imagemountains.jpg" alt="" class="article-widget__article-image">
+                <div class="article-widget__article-description">
+                  <p class="article-widget__article-category">Category</p>
+                  <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
+                  <p class="article-widget__article-date">Jan 13th, 2018</p>
+                </div>
+              </li>
+              <li class="article-widget__article">
+                <img src="./images/src/imagepolice-car.jpg" alt="" class="article-widget__article-image">
+                <div class="article-widget__article-description">
+                  <p class="article-widget__article-category">Category</p>
+                  <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
+                  <p class="article-widget__article-date">Jan 13th, 2018</p>
+                </div>
+              </li>
+              <li class="article-widget__article">
+                <img src="./images/src/imagewinterMountains.jpg" alt="" class="article-widget__article-image">
+                <div class="article-widget__article-description">
+                  <p class="article-widget__article-category">Category</p>
+                  <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
+                  <p class="article-widget__article-date">Jan 13th, 2018</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </ul>
+    </main>
+
+    <div class="authorization-footer">
+      <div class="container">
+        <div class="authorization-footer__inner">
+          <a class="logo authorization-footer__logo" href="#">
+            <div class="logo__container">
+              <div class="logo__circle logo__first-circle"></div>
+              <div class="logo__circle logo__second-circle"></div>
+              <div class="logo__circle logo__third-circle"></div>
+              <div class="logo__circle logo__fourth-circle"></div>
+            </div>
+            <img class="logo__signature" src="../images/src/GRADA.png">
+            </img>
+          </a>
+          <nav class="menu authorization-footer__menu">
+            <ul class="menu__list  authorization-footer__menu-list">
+              <li class="menu__item menu__item_type_active">
+                <a href="#" class="menu__item-link ">home</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__item-link">work</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__item-link">about</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__item-link">blog</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__item-link">contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="entrance-buttons-container authorization-footer__entrance-buttons-container">
+            <button class="entrance-button">login</button>
+            <button class="entrance-button entrance-button_type_active">register</button>
+          </div>
+          <ul class="social-links authorization-footer__social-links">
+            <li class="social-links__item">
+              <div class="social-links__item-image icon-twitter"></div>
+            </li>
+            <li class="social-links__item">
+              <div class="social-links__item-image icon-fb"></div>
+            </li>
+            <li class="social-links__item">
+              <div class="social-links__item-image icon-ball"></div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <script src="js/app.min.js"></script>
+    </div>
+    <footer class="footer footer_type_logged">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="copyright">Copyright © 2018 Grada. All rights reserved.</p>
+          <a class="logo footer__logo" href="#">
+            <div class="logo__container">
+              <div class="logo__circle logo__first-circle"></div>
+              <div class="logo__circle logo__second-circle"></div>
+              <div class="logo__circle logo__third-circle"></div>
+              <div class="logo__circle logo__fourth-circle"></div>
+            </div>
+          </a>
+          <ul class="social-links footer__social-links">
+            <li class="social-links__item">
+              <div class="social-links__item-image icon-twitter"></div>
+            </li>
+            <li class="social-links__item">
+              <div class="social-links__item-image icon-fb"></div>
+            </li>
+            <li class="social-links__item">
+              <div class="social-links__item-image icon-ball"></div>
+            </li>
+            <li class="social-links__item">
+              <div class="social-links__item-image icon-github"></div>
+            </li>
+            <li class="social-links__item">
+              <div class="social-links__item-image icon-gplus"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/app.min.js"></script>
 </body>
 
 </html>

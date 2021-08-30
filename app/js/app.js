@@ -2,13 +2,13 @@ const btn = document.querySelector('#btn');
 const userPresentment = document.querySelector('.user-presentment');
 const menuLogged = document.querySelector('.menu_type_logged');
 const menuNotLogged = document.querySelector('.menu_type_notlogged');
-const buttonsContainer = document.querySelector('.entrance-buttons-container')
+const buttonsContainer = document.querySelector('.entrance-buttons-container');
+const firstHeader = document.querySelector('#choice1');
+const secondHeader = document.querySelector('#choice2');
+firstHeader.checked = true;
 
-btn.onclick = function (e) {
-  e.preventDefault();
-  const firstHeader = document.querySelector('#choice1');
-  const secondHeader = document.querySelector('#choice2');
-  if (firstHeader.checked){
+function refresh(){
+    if (firstHeader.checked){
     menuNotLogged.style.display = 'block';
     buttonsContainer.style.display = 'block';
     menuLogged.style.display = 'none';
@@ -20,4 +20,10 @@ btn.onclick = function (e) {
     menuLogged.style.display = 'block';
     userPresentment.style.display = 'flex';
     }
+};
+
+refresh();
+btn.onclick = function (e) {
+  e.preventDefault();
+  refresh();
 };

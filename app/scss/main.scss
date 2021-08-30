@@ -1,7 +1,9 @@
+
 @import 'normalize';
 @import 'fontello';
 @import 'global';
 @import 'vars';
+@import 'widgets';
 
 @mixin logoCircle($gradient, $deg, $left, $top) {
   background: linear-gradient($gradient);
@@ -81,7 +83,7 @@
     flex-direction: column;
     align-items: center;
     list-style: none;
-    @extend %menuFont;
+    @extend %MontserratS1;
     text-decoration: none;
   }
 
@@ -161,13 +163,8 @@
   border-radius: 20px;
   height: 30px;
   padding: 0px 14px;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
+  @extend %MontserratS1;
   font-weight: bold;
-  font-size: 10px;
-  line-height: 12px;
-  color: white;
-  text-transform: uppercase;
 
   &_type_active {
     background: linear-gradient($gradientOrangePink);
@@ -191,7 +188,7 @@
 }
 
 .user-name {
-  @extend %menuFont;
+  @extend %MontserratS1;
   text-decoration: uppercase;
   margin: 0 10px 0 9px;
 }
@@ -232,4 +229,55 @@
   }
 }
 
+.copyright {
+  @extend %MontserratS2;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+
+  &__item-image {
+    &::before {
+      margin: 0 0 0 24px;
+      width:24px;
+      height: 24px;
+      font-size: 20px;
+      background: linear-gradient($gradientOrangePink);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.gradient-button {
+  position: relative;
+  padding: 0;
+  background: linear-gradient($gradientOrangePink2);
+  border: none;
+  height: 40px;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 20px;
+  color: #fff;
+  &__text {
+    margin: 0;
+    padding: 0;
+    @extend %MontserratS1;
+    font-weight: 700;
+    color: white;
+  }
+  &__icon {
+    position: absolute;
+    right:20px;
+    top: 10px;
+    font-size: 15px;
+  }
+
+}
+
+@import 'footer';
 @import 'media';
