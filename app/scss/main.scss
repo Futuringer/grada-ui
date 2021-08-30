@@ -25,6 +25,14 @@
     align-items: center;
     min-height: 80px;
   }
+  &__logo-background {
+    width: 30px;
+    height: 30px;
+  }
+  &__logo-image {
+    width: 26px;
+    height: 26px
+  }
 }
 
 .menu {
@@ -193,19 +201,19 @@
   margin: 0 10px 0 9px;
 }
 
-.user-logo {
+.person-logo {
   &__background {
     box-sizing: border-box;
-    width: 30px;
-    height: 30px;
+    //width: 30px;
+    //height: 30px;
     background: linear-gradient($gradientOrangePink);
     border-radius: 50%;
     padding: 2px;
   }
 
   &__image {
-    width: 26px;
-    height: 26px;
+    //width: 26px;
+    //height: 26px;
     align-self: center;
     object-fit: cover;
     border-radius: 50%;
@@ -244,7 +252,7 @@
       height: 24px;
       font-size: 20px;
       background: linear-gradient($gradientOrangePink);
-      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }
@@ -263,6 +271,7 @@
   font-size: 24px;
   line-height: 20px;
   color: #fff;
+  width: 100%;
   &__text {
     margin: 0;
     padding: 0;
@@ -276,7 +285,22 @@
     top: 10px;
     font-size: 15px;
   }
+}
 
+.dots-button {
+  height: 6px;
+  width: 26px;
+  background-image: url('../images/src/dots.svg');
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 35px;
+}
+
+.stars-rating {
+  display: flex;
 }
 
 @import 'footer';

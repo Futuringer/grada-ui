@@ -1,3 +1,5 @@
+
+
 .widgets {
   padding: 0;
   //display: flex;
@@ -6,16 +8,18 @@
  // flex-wrap: wrap;
   //align-content:initial;
   //max-width: 1100px;
+  justify-items: center;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr ;
 }
 
 .widget {
+  position: relative;
   box-sizing: border-box;
   background-color: $greyA;
   width: 330px;
-  border-radius: 6px;
+  border-radius: 6px; 
   padding: 30px;
   &__header {
     margin: 0 0 20px;
@@ -28,6 +32,57 @@
   &__paragraph {
     margin: 0 0 20px;
   }
+
+  &__category {
+    margin: 0;
+    @extend %MontserratS1;
+    font-weight: 700;
+    color: $primary;
+  }
+
+  &__top-half-image {
+    object-fit: cover;
+    width: calc(100% + 60px);
+    margin: -30px 0 31px -30px;
+    height: 165px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  &__date {
+    margin: 0;
+    @extend %h5Font;
+    color: $greyC;
+  }
+
+  &__side-button {
+    align-items: center;
+    display: flex;
+    width: 70px;
+    height: 40px;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+  }
+
+  &__side-button-logo {
+    display: inline-block;
+  }
+  
+  &__side-button-text {
+    display: inline-block;
+  }
+
+  &__dots-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+
 }
 
 .simple-text-widget {
@@ -57,6 +112,9 @@
       width: 270px;
       bottom: 0;
     }
+    &:last-child {
+      padding-bottom: 0;
+    }
     &:last-child::after{
       content: none;
     }
@@ -66,23 +124,10 @@
     margin-left:20px;
   }
 
-  &__article-category {
-    margin: 0;
-    @extend %MontserratS1;
-    font-weight: 700;
-    color: $primary;
-  }
-
   &__article-header {
     margin: 7px 0 1px;
     @extend %MontserratS2;
     color: #FFF;
-  }
-
-  &__article-date {
-    margin: 0;
-    @extend %h5Font;
-    color: $greyC;
   }
 
   &__article-image{
@@ -90,6 +135,181 @@
     height: 56px;
     border-radius: 3px;
     object-fit: cover;
+  }
+}
+
+.details-widget {
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__text-block {
+    margin-left: 10px;
+  }
+
+  &__logo {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color:$primary;
+    &:before{
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    @extend %widgets-underline;
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    &:last-child {
+    padding-bottom: 30px;
+    }
+  }
+
+
+  &__text-header {
+    margin: 0 0 2px 0;
+    @extend %MontserratS2;
+  }
+
+  &__text {
+    margin: 0;
+    @extend %MontserratS1;
+    font-weight: 700;
+  }
+}
+
+.list-widget {
+  &__list{
+    list-style: none;
+    padding: 0;
+  }
+  &__item {
+    padding: 0 0 10px 0;
+    margin: 15px 0 0 0;
+    @extend %MontserratS2;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @extend %widgets-underline;
+    &:last-child {
+    padding-bottom: 0;
+    }
+  }
+  &__text {
+    margin: 0;
+    display: inline-block;
+  }
+  &__number {
+    margin: 0;
+    display: inline-block;
+    font-weight: 700;
+    color: $primary;
+  }
+}
+
+.article-text-widget {
+  position: relative;
+  &__avatar-background {
+    position: absolute;
+    top: 139px;
+    right: 30px;
+    width: 52px;
+    height: 52px;
+  }
+  &__avatar-image {
+    width:48px;
+    height: 48px;
+  }
+
+  &__side-button{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient($gradientOrangePink2);
+  }
+
+  &__side-button-logo{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__side-button-text{
+    @extend %MontserratS1;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  &__category {
+    margin-bottom: 5px;
+  }
+
+  &__header {
+    margin-bottom: 10px;
+  }
+
+  &__date {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+.image-text-widget {
+  &__text {
+    margin: 0 0 20px 0;
+  }
+}
+
+.background-image-widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  background-image: url('../images/src/bgImageGirlWatching.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: 50% 50%;
+  height: 330px;
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(60, 68, 77, 0) 0%, #3C444D 100%);
+  }
+  &__category {
+    z-index: 1;
+    margin-bottom: 5px;
+  }
+  &__header {
+    z-index: 1;
+    margin-bottom: 10px;
+  }
+
+  &__date {
+    color:#fff;
+    z-index: 1;
+    margin-bottom: -6px;
+  }
+}
+
+.product-review-widget {
+  &__central-image {
+    margin: 16px 0 35px;
+    width: 270px;
+    height: 146px;
+    object-fit: contain;
   }
 }
 
@@ -105,13 +325,28 @@
   justify-content: center;
   display: grid;
   grid-gap: 20px;
-  grid-column: 1 / span -1;
+  grid-column: 2 / span 1;
 	grid-auto-rows: min-content;
 }
 .grid3 {
   justify-content: center;
   display: grid;
   grid-gap: 20px;
-  grid-column: 1 / span -1;
+  grid-column: 3 / span 1;
+	grid-auto-rows: min-content;
+}
+
+.grid4 {
+  justify-content: center;
+  display: none;
+  grid-gap: 20px;
+  grid-column: 1 / span 1;
+	grid-auto-rows: min-content;
+}
+.grid5 {
+  justify-content: center;
+  display: none;
+  grid-gap: 20px;
+  grid-column: 2 / span 1;
 	grid-auto-rows: min-content;
 }
