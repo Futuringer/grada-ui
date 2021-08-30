@@ -1,4 +1,6 @@
 const btn = document.querySelector('#btn');
+const userPresentment = document.querySelector('.user-presentment');
+const menuLogged = document.querySelector('.menu_type_logged');
 const menuNotLogged = document.querySelector('.menu_type_notlogged');
 const buttonsContainer = document.querySelector('.entrance-buttons-container')
 
@@ -9,9 +11,13 @@ btn.onclick = function (e) {
   if (firstHeader.checked){
     menuNotLogged.style.display = 'block';
     buttonsContainer.style.display = 'block';
+    menuLogged.style.display = 'none';
+    userPresentment.style.display = 'none';
   }
   else {
     menuNotLogged.style.display = 'none';
     buttonsContainer.style.display = 'none';
+    menuLogged.style.display = 'block';
+    userPresentment.style.display = 'flex';
     }
 };
