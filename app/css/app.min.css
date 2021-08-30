@@ -639,7 +639,7 @@ button:hover {
           justify-content: center;
   display: -ms-grid;
   display: grid;
-  grid-gap: 60px;
+  grid-gap: 20px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/span 1;
@@ -653,7 +653,7 @@ button:hover {
           justify-content: center;
   display: -ms-grid;
   display: grid;
-  grid-gap: 60px;
+  grid-gap: 20px;
   grid-column: 1/span -1;
   grid-auto-rows: -webkit-min-content;
   grid-auto-rows: min-content;
@@ -665,7 +665,7 @@ button:hover {
           justify-content: center;
   display: -ms-grid;
   display: grid;
-  grid-gap: 60px;
+  grid-gap: 20px;
   grid-column: 1/span -1;
   grid-auto-rows: -webkit-min-content;
   grid-auto-rows: min-content;
