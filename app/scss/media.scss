@@ -1,7 +1,27 @@
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
   .container {
     padding: 0 70px;
   }
+.widgets {
+  grid-gap: 10px; 
+  grid-template-columns: 1fr 1fr;
+}
+  .grid1 {
+    display:none;
+  }
+  .grid2 {
+    display:none;
+  }
+  .grid3 {
+    display:none;
+  }
+  .grid4 {
+    display: grid;
+  }
+  .grid5{
+    display: grid;
+  }
+
 }
 
 @media (max-width: 950px) {

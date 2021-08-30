@@ -7,6 +7,21 @@ $primary:#F27A54;
 $secondary:#A154F2;
 $tertiary:#6FCF97;
 
+%widgets-underline {
+      &::after{
+      content: " ";
+      position: absolute;
+      display: block;
+      background-color: rgba(255,255,255,0.1);
+      height: 1px;
+      width: 270px;
+      bottom: 0;
+    }
+
+        &:last-child::after{
+      content: none;
+    }
+}
 
 %h3Font{
   font-family: 'Zilla Slab', serif;
@@ -23,6 +38,7 @@ $tertiary:#6FCF97;
   font-size: 17px;
   line-height: 22px;
 }
+
 
 %MontserratS1{
   font-family: 'Montserrat', sans-serif;
