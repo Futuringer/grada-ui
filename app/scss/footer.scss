@@ -1,5 +1,5 @@
 .footer {
-  background-color: $greyAopacity05;
+  background-color: $grey-A-opacity;
 
   &__inner {
     display: flex;
@@ -15,7 +15,7 @@
 }
 
 .authorization-footer {
-  background-color: $greyA;
+  background-color: $grey-A;
 
   &__inner {
     display: flex;
@@ -38,7 +38,7 @@
 @media (max-width: 720px) {
 
   .authorization-footer {
-    background-color: $greyA;
+    background-color: $grey-A;
     &__inner {
       position: relative;
       min-height: 200px;
