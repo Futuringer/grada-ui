@@ -1,17 +1,15 @@
-
-
 .widgets {
   padding: 0;
   //display: flex;
- // justify-content: space-around;
+  // justify-content: space-around;
   //align-items: flex-start;
- // flex-wrap: wrap;
+  // flex-wrap: wrap;
   //align-content:initial;
   //max-width: 1100px;
   justify-items: center;
   display: grid;
   grid-gap: 60px;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .widget {
@@ -19,16 +17,19 @@
   box-sizing: border-box;
   background-color: $grey-A;
   width: 330px;
-  border-radius: 6px; 
+  border-radius: 6px;
   padding: 30px;
+
   &__header {
     margin: 0 0 20px;
     @extend %h3-font;
-    color: #FFF;
+    color: #fff;
   }
+
   &__text {
     @extend %Montserrat-s2;
   }
+
   &__paragraph {
     margin: 0 0 20px;
   }
@@ -71,7 +72,7 @@
   &__side-button-logo {
     display: inline-block;
   }
-  
+
   &__side-button-text {
     display: inline-block;
   }
@@ -81,8 +82,6 @@
     top: 20px;
     right: 20px;
   }
-
-
 }
 
 .simple-text-widget {
@@ -92,7 +91,7 @@
 }
 
 .article-widget {
-  &__articles{
+  &__articles {
     margin-top: 22px;
     padding: 0;
     list-style: none;
@@ -103,34 +102,37 @@
     margin-top: 17px;
     padding-bottom: 14px;
     position: relative;
-      &::after{
+
+    &::after {
       content: " ";
       position: absolute;
       display: block;
-      background-color: rgba(255,255,255,0.1);
+      background-color: rgba(255, 255, 255, 0.1);
       height: 1px;
       width: 270px;
       bottom: 0;
     }
+
     &:last-child {
       padding-bottom: 0;
     }
-    &:last-child::after{
+
+    &:last-child::after {
       content: none;
     }
   }
 
   &__article-description {
-    margin-left:20px;
+    margin-left: 20px;
   }
 
   &__article-header {
     margin: 7px 0 1px;
     @extend %Montserrat-s2;
-    color: #FFF;
+    color: #fff;
   }
 
-  &__article-image{
+  &__article-image {
     width: 56px;
     height: 56px;
     border-radius: 3px;
@@ -152,8 +154,9 @@
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color:$primary;
-    &:before{
+    color: $primary;
+
+    &:before {
       position: relative;
       top: 5px;
     }
@@ -165,11 +168,11 @@
     display: flex;
     margin-top: 20px;
     padding-bottom: 20px;
+
     &:last-child {
-    padding-bottom: 30px;
+      padding-bottom: 30px;
     }
   }
-
 
   &__text-header {
     margin: 0 0 2px 0;
@@ -184,10 +187,11 @@
 }
 
 .list-widget {
-  &__list{
+  &__list {
     list-style: none;
     padding: 0;
   }
+
   &__item {
     padding: 0 0 10px 0;
     margin: 15px 0 0 0;
@@ -196,14 +200,17 @@
     justify-content: space-between;
     position: relative;
     @extend %widgets-underline;
+
     &:last-child {
-    padding-bottom: 0;
+      padding-bottom: 0;
     }
   }
+
   &__text {
     margin: 0;
     display: inline-block;
   }
+
   &__number {
     margin: 0;
     display: inline-block;
@@ -214,6 +221,7 @@
 
 .article-text-widget {
   position: relative;
+
   &__avatar-background {
     position: absolute;
     top: 139px;
@@ -221,18 +229,19 @@
     width: 52px;
     height: 52px;
   }
+
   &__avatar-image {
-    width:48px;
+    width: 48px;
     height: 48px;
   }
 
-  &__side-button{
+  &__side-button {
     padding: 0;
     margin: 0;
     background: linear-gradient($gradient-orange-pink2);
   }
 
-  &__side-button-logo{
+  &__side-button-logo {
     width: 40px;
     height: 40px;
     color: #fff;
@@ -241,7 +250,7 @@
     align-items: center;
   }
 
-  &__side-button-text{
+  &__side-button-text {
     @extend %Montserrat-s1;
     color: #fff;
     font-weight: 700;
@@ -260,8 +269,6 @@
   }
 }
 
-
-
 .image-text-widget {
   &__text {
     margin: 0 0 20px 0;
@@ -273,32 +280,35 @@
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  background-image: url('../images/src/bgImageGirlWatching.jpg');
+  background-image: url("../images/src/bgImageGirlWatching.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-position: 50% 50%;
   height: 330px;
-  &::before{
-    content: '';
+
+  &::before {
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(60, 68, 77, 0) 0%, #3C444D 100%);
+    background: linear-gradient(180deg, rgba(60, 68, 77, 0) 0%, #3c444d 100%);
   }
+
   &__category {
     z-index: 1;
     margin-bottom: 5px;
   }
+
   &__header {
     z-index: 1;
     margin-bottom: 10px;
   }
 
   &__date {
-    color:#fff;
+    color: #fff;
     z-index: 1;
     margin-bottom: -6px;
   }
@@ -313,7 +323,7 @@
   }
 
   &__side-button {
-    background-color:#FFF;
+    background-color: #fff;
   }
 
   &__side-button-logo {
@@ -340,7 +350,6 @@
 }
 
 .person-widget {
-
   &__avatar-background {
     margin: 20px auto 47px;
     width: 132px;
@@ -356,13 +365,12 @@
   }
 
   &__category {
-    
     text-align: center;
     margin-bottom: 5px;
   }
 
   &__name {
-    text-align: center; 
+    text-align: center;
     margin-bottom: 10px;
   }
 
@@ -377,7 +385,7 @@
 }
 
 .gradient-info-widget {
-   background: linear-gradient($gradient-orange-pink3);
+  background: linear-gradient($gradient-orange-pink3);
 
   &__image {
     box-sizing: border-box;
@@ -389,7 +397,7 @@
   }
 
   &__text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 48px;
@@ -414,56 +422,71 @@
   }
 }
 
-.wrapper2 {
-  width: 100px; /* Set the size of the progress bar */
-  height: 100px;
-  position: absolute; /* Enable clipping */
-  clip: rect(0px, 100px, 100px, 70px); /* Hide half of the progress bar */
-}
-/* Set the sizes of the elements that make up the progress bar */
-.circle {
-  width: 80px;
-  height: 80px;
-  border: 10px solid green;
-  border-radius: 50px;
-  position: absolute;
-  clip: rect(0px, 50px, 100px, 0px);
+.graph-widget {
+  &__circle-container {
+    font-size: 160px;
+    margin-bottom: 13px;
+  }
+
+  &__header {
+    text-align: center;
+    margin: 13px 0 10px;
+  }
+
+  &__subheader {
+    @extend %h5-font;
+    text-align: center;
+    margin: 0 0 24px;
+    color: #fff;
+    opacity: 0.7;
+  }
 }
 
-.grid1 {
-  justify-content: center;
-  display: grid;
-  grid-gap: 20px;
-  grid-column: 1 / span 1;
-	grid-auto-rows: min-content;
+.map-widget {
+    height: 330px;
+    width: 330px;
+  &__adress {
+    margin: 192px 0 12px;
+    position: absolute;
+    top: 0;
+    width: 270px;
+    @extend %Montserrat-s2;
+    text-align: center;
+  }
+  
+  &__button {
+    position: absolute;
+    width: 116px;
+    height: 30px;
+    left: 107px;
+    bottom: 30px;
+  }
 }
 
-.grid2 {
-  justify-content: center;
-  display: grid;
-  grid-gap: 20px;
-  grid-column: 2 / span 1;
-	grid-auto-rows: min-content;
-}
-.grid3 {
-  justify-content: center;
-  display: grid;
-  grid-gap: 20px;
-  grid-column: 3 / span 1;
-	grid-auto-rows: min-content;
+#map > ymaps {
+border-radius: 6px;
+overflow: hidden;
 }
 
-.grid4 {
-  justify-content: center;
-  display: none;
-  grid-gap: 20px;
-  grid-column: 1 / span 1;
-	grid-auto-rows: min-content;
+.ymaps-2-1-79-gotoymaps {
+  display: none !important;
 }
-.grid5 {
-  justify-content: center;
-  display: none;
-  grid-gap: 20px;
-  grid-column: 2 / span 1;
-	grid-auto-rows: min-content;
+
+.ymaps-2-1-79-map-copyrights-promo {
+  display: none !important;
+}
+
+.ymaps-2-1-79-copyright__link {
+    display: none !important;
+}
+
+.ymaps-2-1-79-copyright__agreement {
+    display: none !important;
+}
+
+.ymaps-2-1-79-copyright__text {
+    display: none !important;
+}
+.ymaps-2-1-79-copyright_logo_no {
+    display: none !important;
 }

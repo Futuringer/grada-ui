@@ -2,7 +2,6 @@
 @import "fontello";
 @import "global";
 @import "vars";
-@import "widgets";
 
 @mixin logoCircle($gradient, $deg, $left, $top) {
   background: linear-gradient($gradient);
@@ -24,10 +23,12 @@
     align-items: center;
     min-height: 80px;
   }
+
   &__logo-background {
     width: 30px;
     height: 30px;
   }
+
   &__logo-image {
     width: 26px;
     height: 26px;
@@ -39,11 +40,10 @@
     &_notlogged {
       margin-left: auto;
     }
-  }
-
-  &_type_logged {
-    position: absolute;
-    left: calc(50% - 235px);
+    &_logged {
+      position: absolute;
+      left: calc(50% - 235px);
+    }
   }
 
   &__list {
@@ -206,16 +206,12 @@
 .person-logo {
   &__background {
     box-sizing: border-box;
-    //width: 30px;
-    //height: 30px;
     background: linear-gradient($gradient-orange-pink);
     border-radius: 50%;
     padding: 2px;
   }
 
   &__image {
-    //width: 26px;
-    //height: 26px;
     align-self: center;
     object-fit: cover;
     border-radius: 50%;
@@ -323,5 +319,120 @@
   }
 }
 
+.circle-chart {
+  &__container {
+    display: flex;
+    //font-size: 160px;
+    box-sizing: border-box;
+    &:after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+  }
+}
+
+.pie-wrapper {
+  
+  margin: auto;
+  width: $circle-chart-default-size;
+  height: $circle-chart-default-size;
+  float: left;
+  position: relative;
+}
+
+.pie {
+  
+  width: 100%;
+  height: 100%;
+  clip: rect(
+    0,
+    $circle-chart-default-size,
+    $circle-chart-default-size,
+    $circle-chart-default-size / 2
+  );
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.half-circle {
+  
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: ($circle-chart-default-size / 15) solid #3498db; //толщина круга-градиента
+  border-radius: 50%;
+  clip: rect(0, $circle-chart-default-size / 2, $circle-chart-default-size, 0);
+  position: absolute;
+}
+
+.label {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+
+  border-radius: 50%;
+  bottom: $circle-chart-label / 10;
+  color: #fff;
+  left: $circle-chart-label / 10;
+  line-height: $circle-chart-label * 0.7; //двигаем надпись 75 верх-низ
+  position: absolute;
+  right: $circle-chart-label / 10;
+  text-align: center;
+  top: $circle-chart-label / 10;
+}
+
+.progress-30 {
+  filter:drop-shadow(0px 10px 10px white) ;
+  @include circle-chart-progress(75, #fff);
+}
+
+#map {
+  height: 100%;
+  margin: -30px;
+}
+
+.grid1 {
+  justify-content: center;
+  display: grid;
+  grid-gap: 20px;
+  grid-column: 1 / span 1;
+  grid-auto-rows: min-content;
+}
+
+.grid2 {
+  justify-content: center;
+  display: grid;
+  grid-gap: 20px;
+  grid-column: 2 / span 1;
+  grid-auto-rows: min-content;
+}
+
+.grid3 {
+  justify-content: center;
+  display: grid;
+  grid-gap: 20px;
+  grid-column: 3 / span 1;
+  grid-auto-rows: min-content;
+}
+
+.grid4 {
+  justify-content: center;
+  display: none;
+  grid-gap: 20px;
+  grid-column: 1 / span 1;
+  grid-auto-rows: min-content;
+}
+
+.grid5 {
+  justify-content: center;
+  display: none;
+  grid-gap: 20px;
+  grid-column: 2 / span 1;
+  grid-auto-rows: min-content;
+}
+
+@import "widgets";
 @import "footer";
 @import "media";

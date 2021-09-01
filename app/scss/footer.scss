@@ -36,7 +36,6 @@
 }
 
 @media (max-width: 720px) {
-
   .authorization-footer {
     background-color: $grey-A;
     &__inner {
@@ -44,7 +43,6 @@
       min-height: 200px;
       justify-content: center;
       align-items: flex-end;
-
     }
 
     &__entrance-buttons-container {
@@ -70,18 +68,17 @@
     }
   }
 
-    .footer {
-      &__inner {
-        justify-content: center;
-      }
-
-      &__logo {
-        display: none;
-      }
-
-      &__social-links {
-        display: none;
-      }
+  .footer {
+    &__inner {
+      justify-content: center;
     }
 
+    &__logo {
+      display: none;
+    }
+
+    &__social-links {
+      display: none;
+    }
   }
+}

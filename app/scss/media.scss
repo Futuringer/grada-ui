@@ -2,23 +2,29 @@
   .container {
     padding: 0 70px;
   }
-.widgets {
-  grid-gap: 10px; 
-  grid-template-columns: 1fr 1fr;
-}
+
+  .widgets {
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+
   .grid1 {
-    display:none;
+    display: none;
   }
+
   .grid2 {
-    display:none;
+    display: none;
   }
+
   .grid3 {
-    display:none;
+    display: none;
   }
+
   .grid4 {
     display: grid;
   }
-  .grid5{
+
+  .grid5 {
     display: grid;
   }
 

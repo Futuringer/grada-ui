@@ -189,17 +189,22 @@
             <p class="gradient-info-widget__category">Sunny and raining</p>
           </div>
 
-          <div class="widget progress-circle-widget">
+          <div class="widget graph-widget">
             <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header gradient-info-widget__header">Craiova, RO</h3>
-            <p class="gradient-info-widget__category">Sunny and raining</p>
-            <div class="wrapper" data-anim="base wrapper">
-              <div class="circle" data-anim="base left"></div>
-              <div class="circle" data-anim="base right"></div>
+            <h3 class="widget__header graph-widget__header">Lorem Ipsum</h3>
+            <p class="graph-widget__subheader">Dolor sit amet consectetur</p>
+            <div class="circle-chart__container graph-widget__circle-container">
+              <div class="pie-wrapper progress-30">
+                <p class="label">75%</p>
+                <div class="pie">
+                  <div class="left-side half-circle"></div>
+                  <div class="right-side half-circle"></div>
+                </div>
+              </div>
             </div>
 
-          </div>
 
+          </div>
         </div>
 
         <div class="grid2">
@@ -228,7 +233,7 @@
                   <p class="widget__category">Category</p>
                   <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
                   <p class="widget__date">Jan 13th, 2018</p>
-                </div>             
+                </div>
               </li>
             </ul>
           </div>
@@ -254,12 +259,12 @@
             <img src="./images/src/MackBook15.png" alt="" class="product-review-widget__central-image">
             <p class="widget__category product-review-widget__category">category</p>
             <h3 class="widget__header product-review-widget__header">MacBook Pro 15” 2017 Remake</h3>
-              <div class="stars-rating">
-                <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star1"></div>
-                <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star2"></div>
-                <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star3"></div>
-                <div class="stars-rating__star icon-star" id="star4"></div>
-                <div class="stars-rating__star icon-star" id="star5"></div>
+            <div class="stars-rating">
+              <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star1"></div>
+              <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star2"></div>
+              <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star3"></div>
+              <div class="stars-rating__star icon-star" id="star4"></div>
+              <div class="stars-rating__star icon-star" id="star5"></div>
             </div>
           </div>
 
@@ -330,14 +335,25 @@
           </div>
 
           <div class="widget person-widget">
-              <div class="person-logo__background person-widget__avatar-background">
-                <img src="./images/src/webDesignerAvatar.jpg" alt="avatar"
-                  class="person-logo__image person-widget__avatar-image">
-              </div>
+            <div class="person-logo__background person-widget__avatar-background">
+              <img src="./images/src/webDesignerAvatar.jpg" alt="avatar"
+                class="person-logo__image person-widget__avatar-image">
+            </div>
             <button class="dots-button widget__dots-button"></button>
             <p class="widget__category person-widget__category">Web Designer</p>
             <h3 class="widget__header person-widget__name">Alejandro Suarez</h3>
             <p class="person-widget__location">Craiova, RO</p>
+          </div>
+
+          <div class="widget map-widget">
+            <div id="map" style="width: 330px; height: 330px; z-index: 0; "></div>
+            <p class="map-widget__adress">
+              138 Mount Pleasant<br>
+              Bracknell, RG12 9EA <br>
+              Berkshire, UK</p>
+            <button class="gradient-button map-widget__button">
+              <p class="gradient-button__text">get directions</p>
+            </button>
           </div>
 
         </div>
@@ -432,10 +448,10 @@
           </div>
 
           <div class="widget person-widget">
-              <div class="person-logo__background person-widget__avatar-background">
-                <img src="./images/src/webDesignerAvatar.jpg" alt="avatar"
-                  class="person-logo__image person-widget__avatar-image">
-              </div>
+            <div class="person-logo__background person-widget__avatar-background">
+              <img src="./images/src/webDesignerAvatar.jpg" alt="avatar"
+                class="person-logo__image person-widget__avatar-image">
+            </div>
             <button class="dots-button widget__dots-button"></button>
             <p class="widget__category person-widget__category">Web Designer</p>
             <h3 class="widget__header person-widget__name">Alejandro Suarez</h3>
@@ -515,12 +531,12 @@
             <img src="./images/src/MackBook15.png" alt="" class="product-review-widget__central-image">
             <p class="widget__category product-review-widget__category">category</p>
             <h3 class="widget__header product-review-widget__header">MacBook Pro 15” 2017 Remake</h3>
-              <div class="stars-rating">
-                <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star1"></div>
-                <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star2"></div>
-                <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star3"></div>
-                <div class="stars-rating__star icon-star" id="star4"></div>
-                <div class="stars-rating__star icon-star" id="star5"></div>
+            <div class="stars-rating">
+              <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star1"></div>
+              <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star2"></div>
+              <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star3"></div>
+              <div class="stars-rating__star icon-star" id="star4"></div>
+              <div class="stars-rating__star icon-star" id="star5"></div>
             </div>
           </div>
 
@@ -611,6 +627,7 @@
       </div>
     </footer>
   </div>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=fce329b4-5dcd-4234-8c4d-214474093353&lang=ru_RU" type="text/javascript"></script>
   <script src="js/app.min.js"></script>
 </body>
 
