@@ -1,9 +1,7 @@
-
-@import 'normalize';
-@import 'fontello';
-@import 'global';
-@import 'vars';
-@import 'widgets';
+@import "normalize";
+@import "fontello";
+@import "global";
+@import "vars";
 
 @mixin logoCircle($gradient, $deg, $left, $top) {
   background: linear-gradient($gradient);
@@ -17,7 +15,7 @@
 }
 
 .header {
-  background-color: $greyA;
+  background-color: $grey-A;
 
   &__inner {
     display: flex;
@@ -25,25 +23,27 @@
     align-items: center;
     min-height: 80px;
   }
+
   &__logo-background {
     width: 30px;
     height: 30px;
   }
+
   &__logo-image {
     width: 26px;
-    height: 26px
+    height: 26px;
   }
 }
 
 .menu {
-
-  &_type_notlogged {
-    margin-left: auto;
-  }
-
-  &_type_logged {
-    position: absolute;
-    left: calc(50% - 235px);
+  &_type {
+    &_notlogged {
+      margin-left: auto;
+    }
+    &_logged {
+      position: absolute;
+      left: calc(50% - 235px);
+    }
   }
 
   &__list {
@@ -53,20 +53,23 @@
     display: flex;
     padding: 0;
     margin: 0 5px 0 0;
-
   }
 
   &__item {
+    $item: &;
     position: relative;
     box-sizing: border-box;
     margin-right: 30px;
     padding-bottom: 7px;
 
     &_type_active {
+      #{$item}-link {
+        color: white;
+      }
       &:after {
         content: " ";
         display: block;
-        background: linear-gradient($gradientOrangePink);
+        background: linear-gradient($gradient-orange-pink);
         height: 2px;
         width: 100%;
         position: absolute;
@@ -91,7 +94,7 @@
     flex-direction: column;
     align-items: center;
     list-style: none;
-    @extend %MontserratS1;
+    @extend %Montserrat-s1;
     text-decoration: none;
   }
 
@@ -105,7 +108,6 @@
       left: 4px;
     }
   }
-
 
   &__item-text {
     margin: 0;
@@ -136,7 +138,7 @@
     height: 24px;
 
     #{$logo}__first-circle {
-      @include logoCircle($logoGradient1, -90deg, 8px, 0);
+      @include logoCircle($logo-gradient1, -90deg, 8px, 0);
     }
   }
 
@@ -147,19 +149,19 @@
   }
 
   &__first-circle {
-    @include logoCircle($logoGradient1, -90deg, 8px, 0);
+    @include logoCircle($logo-gradient1, -90deg, 8px, 0);
   }
 
   &__second-circle {
-    @include logoCircle($logoGradient2, 0, 16px, 8px);
+    @include logoCircle($logo-gradient2, 0, 16px, 8px);
   }
 
   &__third-circle {
-    @include logoCircle($logoGradient1, 90deg, 8px, 16px);
+    @include logoCircle($logo-gradient1, 90deg, 8px, 16px);
   }
 
   &__fourth-circle {
-    @include logoCircle($logoGradient2, 180deg, 0, 8px);
+    @include logoCircle($logo-gradient2, 180deg, 0, 8px);
   }
 }
 
@@ -171,18 +173,18 @@
   border-radius: 20px;
   height: 30px;
   padding: 0px 14px;
-  @extend %MontserratS1;
+  @extend %Montserrat-s1;
   font-weight: bold;
 
   &_type_active {
-    background: linear-gradient($gradientOrangePink);
+    background: linear-gradient($gradient-orange-pink);
     border: transparent;
   }
 }
 
 .user-presentment {
   display: flex;
-  align-items: center
+  align-items: center;
 }
 
 .check-mark {
@@ -190,13 +192,13 @@
   top: -2px;
   font-size: 13px;
   margin: 0;
-  background: linear-gradient($gradientOrangePink);
+  background: linear-gradient($gradient-orange-pink);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .user-name {
-  @extend %MontserratS1;
+  @extend %Montserrat-s1;
   text-decoration: uppercase;
   margin: 0 10px 0 9px;
 }
@@ -204,16 +206,12 @@
 .person-logo {
   &__background {
     box-sizing: border-box;
-    //width: 30px;
-    //height: 30px;
-    background: linear-gradient($gradientOrangePink);
+    background: linear-gradient($gradient-orange-pink);
     border-radius: 50%;
     padding: 2px;
   }
 
   &__image {
-    //width: 26px;
-    //height: 26px;
     align-self: center;
     object-fit: cover;
     border-radius: 50%;
@@ -238,7 +236,7 @@
 }
 
 .copyright {
-  @extend %MontserratS2;
+  @extend %Montserrat-s2;
 }
 
 .social-links {
@@ -248,10 +246,10 @@
   &__item-image {
     &::before {
       margin: 0 0 0 24px;
-      width:24px;
+      width: 24px;
       height: 24px;
       font-size: 20px;
-      background: linear-gradient($gradientOrangePink);
+      background: linear-gradient($gradient-orange-pink);
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -261,27 +259,29 @@
 .gradient-button {
   position: relative;
   padding: 0;
-  background: linear-gradient($gradientOrangePink2);
+  background: linear-gradient($gradient-orange-pink2);
   border: none;
   height: 40px;
   border-radius: 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 20px;
   color: #fff;
   width: 100%;
+
   &__text {
     margin: 0;
     padding: 0;
-    @extend %MontserratS1;
+    @extend %Montserrat-s1;
     font-weight: 700;
     color: white;
   }
+
   &__icon {
     position: absolute;
-    right:20px;
+    right: 20px;
     top: 10px;
     font-size: 15px;
   }
@@ -290,7 +290,7 @@
 .dots-button {
   height: 6px;
   width: 26px;
-  background-image: url('../images/src/dots.svg');
+  background-image: url("../images/src/dots.svg");
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -301,7 +301,138 @@
 
 .stars-rating {
   display: flex;
+
+  &__star {
+    color: $primary;
+    opacity: 0.3;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 19px;
+    height: 19px;
+    margin-bottom: -4px;
+
+    &_type_active {
+      opacity: 1;
+    }
+  }
 }
 
-@import 'footer';
-@import 'media';
+.circle-chart {
+  &__container {
+    display: flex;
+    //font-size: 160px;
+    box-sizing: border-box;
+    &:after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+  }
+}
+
+.pie-wrapper {
+  
+  margin: auto;
+  width: $circle-chart-default-size;
+  height: $circle-chart-default-size;
+  float: left;
+  position: relative;
+}
+
+.pie {
+  
+  width: 100%;
+  height: 100%;
+  clip: rect(
+    0,
+    $circle-chart-default-size,
+    $circle-chart-default-size,
+    $circle-chart-default-size / 2
+  );
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.half-circle {
+  
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: ($circle-chart-default-size / 15) solid #3498db; //толщина круга-градиента
+  border-radius: 50%;
+  clip: rect(0, $circle-chart-default-size / 2, $circle-chart-default-size, 0);
+  position: absolute;
+}
+
+.label {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+
+  border-radius: 50%;
+  bottom: $circle-chart-label / 10;
+  color: #fff;
+  left: $circle-chart-label / 10;
+  line-height: $circle-chart-label * 0.7; //двигаем надпись 75 верх-низ
+  position: absolute;
+  right: $circle-chart-label / 10;
+  text-align: center;
+  top: $circle-chart-label / 10;
+}
+
+.progress-30 {
+  filter:drop-shadow(0px 10px 10px white) ;
+  @include circle-chart-progress(75, #fff);
+}
+
+#map {
+  height: 100%;
+  margin: -30px;
+}
+
+.grid1 {
+  justify-content: center;
+  display: grid;
+  grid-gap: 20px;
+  grid-column: 1 / span 1;
+  grid-auto-rows: min-content;
+}
+
+.grid2 {
+  justify-content: center;
+  display: grid;
+  grid-gap: 20px;
+  grid-column: 2 / span 1;
+  grid-auto-rows: min-content;
+}
+
+.grid3 {
+  justify-content: center;
+  display: grid;
+  grid-gap: 20px;
+  grid-column: 3 / span 1;
+  grid-auto-rows: min-content;
+}
+
+.grid4 {
+  justify-content: center;
+  display: none;
+  grid-gap: 20px;
+  grid-column: 1 / span 1;
+  grid-auto-rows: min-content;
+}
+
+.grid5 {
+  justify-content: center;
+  display: none;
+  grid-gap: 20px;
+  grid-column: 2 / span 1;
+  grid-auto-rows: min-content;
+}
+
+@import "widgets";
+@import "footer";
+@import "media";
