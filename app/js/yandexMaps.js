@@ -27,8 +27,8 @@ ymaps.ready(function () {
         },
         // Свойства.
         properties: {
-            hintContent: 'Перетащи меня!',
-            balloonContent: 'Прямоугольник 2'
+           // hintContent: 'Перетащи меня!',
+            //balloonContent: 'Прямоугольник 2'
         }
     }, {
         // Опции.
@@ -50,8 +50,8 @@ ymaps.ready(function () {
         ),
 
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Собственный значок метки',
-            balloonContent: 'Это красивая метка'
+            //hintContent: 'Собственный значок метки',
+            //balloonContent: 'Это красивая метка'
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
@@ -66,11 +66,13 @@ ymaps.ready(function () {
         }),
         
 
-        myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+       /* myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
             hintContent: 'Собственный значок метки с контентом',
             balloonContent: 'А эта — новогодняя',
             iconContent: '12'
-        }, {
+        }
+        
+        , {
             // Опции.
             // Необходимо указать данный тип макета.
             iconLayout: 'default#imageWithContent',
@@ -86,12 +88,10 @@ ymaps.ready(function () {
             // Макет содержимого.
             iconContentLayout: MyIconContentLayout
         });
-
+*/
 
     myMap.geoObjects
         .add(myPlacemark)
-        .add(myPlacemarkWithContent)
+       // .add(myPlacemarkWithContent)
         .add(myGeoObject);
-
-     
 });
