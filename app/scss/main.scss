@@ -355,12 +355,22 @@
   position: absolute;
   top: 0;
 }
+
+.full-circle {
+  box-sizing: border-box;
+  position: absolute;
+  border: 4px solid $dark;
+  border-radius: 50%;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+
 .half-circle {
-  
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  border: ($circle-chart-default-size / 15) solid #3498db; //толщина круга-градиента
+  border: ($circle-chart-default-size / 15) solid #CF6A98; //толщина круга-градиента
   border-radius: 50%;
   clip: rect(0, $circle-chart-default-size / 2, $circle-chart-default-size, 0);
   position: absolute;
@@ -372,11 +382,12 @@
   font-weight: 300;
   font-size: 32px;
 
+  filter:drop-shadow($shadow-widget-image);
   border-radius: 50%;
   bottom: $circle-chart-label / 10;
   color: #fff;
   left: $circle-chart-label / 10;
-  line-height: $circle-chart-label * 0.7; //двигаем надпись 75 верх-низ
+  line-height: $circle-chart-label * 0.6; //двигаем надпись 75 верх-низ
   position: absolute;
   right: $circle-chart-label / 10;
   text-align: center;
@@ -384,7 +395,7 @@
 }
 
 .progress-30 {
-  filter:drop-shadow(0px 10px 10px white) ;
+  filter:drop-shadow($shadow-widget-image);
   @include circle-chart-progress(75, #fff);
 }
 

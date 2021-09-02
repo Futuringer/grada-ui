@@ -64,7 +64,7 @@ $logo-gradient1: rgba(161, 84, 242, 0) 0%, $secondary 100%;
 $logo-gradient2: rgba(242, 122, 84, 0) 0%, $primary 100%;
 $gradient-orange-pink: 90deg, $primary 0%, $secondary 186.42%;
 $gradient-orange-pink2: 90deg, $primary 0%, $secondary 100%;
-$gradient-orange-pink3: 135deg, #F27A54 0%, #A154F2 100%;
+$gradient-orange-pink3: 135deg, $primary 0%, $secondary 100%;
 
 $circle-chart-default-size: 1em;
 $circle-chart-label: $circle-chart-default-size * 4;
