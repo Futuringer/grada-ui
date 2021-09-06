@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  
+
+  <script src="https://d3js.org/d3.v7.min.js"></script> <!--d3-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
@@ -191,7 +192,7 @@
             <p class="gradient-info-widget__category">Sunny and raining</p>
           </div>
 
-          <div class="widget graph-widget">
+          <!--<div class="widget graph-widget">
             <button class="dots-button widget__dots-button"></button>
             <h3 class="widget__header graph-widget__header">Lorem Ipsum</h3>
             <p class="graph-widget__subheader">Dolor sit amet consectetur</p>
@@ -205,8 +206,17 @@
                 </div>
               </div>
             </div>
+          </div>-->
+
+
+          <div class="widget circle-widget">
+            <button class="dots-button widget__dots-button"></button>
+            <h3 class="widget__header circle-widget__header">Lorem Ipsum</h3>
+            <p class="circle-widget__subheader">Dolor sit amet consectetur</p>
+              <div class='circle-widget__graph-container'> 
+              </div>
           </div>
-        </div>
+          </div>
 
         <div class="grid2">
           <div class="widget article-widget">
@@ -277,20 +287,12 @@
             <p class="gradient-info-widget__category">Posted by our users</p>
           </div>
 
-          <div class="widget graph-widget">
+          <div class="widget donut-widget">
             <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header graph-widget__header">Lorem Ipsum</h3>
-            <p class="graph-widget__subheader">Dolor sit amet consectetur</p>
-            <div class="ct-chart ct-perfect-fourth"></div>
-
-<div>
-  <canvas id="myChart"></canvas>
-</div>
- 
-
+            <h3 class="widget__header donut-widget__header">Lorem Ipsum</h3>
+            <p class="donut-widget__subheader">Dolor sit amet consectetur</p>
+            <div class="donut-widget__graph-container"></div>
           </div>
-
-
         </div>
 
         <div class="grid3">
@@ -474,6 +476,14 @@
             <p class="person-widget__location">Craiova, RO</p>
           </div>
 
+          <!--<div class="widget graph-widget">
+            <button class="dots-button widget__dots-button"></button>
+            <h3 class="widget__header graph-widget__header">Lorem Ipsum</h3>
+            <p class="graph-widget__subheader">Dolor sit amet consectetur</p>
+              <div class='graph-widget__graph-container'> 
+              </div>
+          </div>-->
+
         </div>
 
 
@@ -643,51 +653,9 @@
       </div>
     </footer>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--graphs-->
   <script src="https://api-maps.yandex.ru/2.1/?apikey=fce329b4-5dcd-4234-8c4d-214474093353&lang=ru_RU" type="text/javascript"></script>
   <script src="js/app.min.js"></script>
-  <script>
 
-const labels = [
-    '0',
-    '10',
-    '20',
-    '30',
-    '40',
-    '50',
-    '60'
-  ];
-
-  
-const data = {
-  labels: labels,
-  datasets: [{
-    label: 'My First Dataset',
-    data: [0, 30, 40, 20, 30, 50, 50],
-    fill: false,
-    borderColor: 'rgb(75, 192, 192)',
-    tension: 0.5
-  }]
-};
-
-const config = {
-  type: 'line',
-  data: data,
-  options: {
-    plugins: {legend: { display: false }},
-    elements: {
-      point: {
-        radius: 0
-      },
-      line: {
-        tension: 1
-      }
-    }
-  }
-};
-
- var myChart = new Chart( document.getElementById('myChart'), config, data);
-    </script>
 </body>
 
 </html>
