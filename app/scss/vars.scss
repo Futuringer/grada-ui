@@ -59,6 +59,15 @@ $tertiary:#6FCF97;
   color: $grey-C;
 }
 
+%Montserrat-s3 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 39px;
+  color: #fff;
+}
+
 $shadow-widget-image: 0px 10px 10px rgba(0, 0, 0, 0.25);
 $logo-gradient1: rgba(161, 84, 242, 0) 0%, $secondary 100%;
 $logo-gradient2: rgba(242, 122, 84, 0) 0%, $primary 100%;

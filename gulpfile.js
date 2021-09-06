@@ -34,7 +34,7 @@ function browsersync() {
 }
 
 function scripts() {
-  return src(["app/js/yandexMaps.js", "app/js/app.js"])
+  return src(["app/js/yandexMaps.js","app/js/widgetsHTML.js", "app/js/app.js"])
     .pipe(concat("app.min.js")) //собрали в один
     .pipe(uglify())
     .pipe(dest("app/js/")) //выгрузили в dist

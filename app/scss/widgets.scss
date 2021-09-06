@@ -422,7 +422,7 @@
   }
 }
 
-.graph-widget {
+.circle-widget {
 
   &__circle-container {
     font-size: 160px;
@@ -440,6 +440,11 @@
     margin: 0 0 24px;
     color: #fff;
     opacity: 0.7;
+  }
+
+  &__graph-container {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -490,4 +495,31 @@ overflow: hidden;
 }
 .ymaps-2-1-79-copyright_logo_no {
     display: none !important;
+}
+
+.donut-widget {
+  &__circle-container {
+    font-size: 160px;
+    margin-bottom: 13px;
+  }
+
+  &__header {
+    text-align: center;
+    margin: 13px 0 10px;
+  }
+
+  &__subheader {
+    @extend %h5-font;
+    text-align: center;
+    margin: 0 0 24px;
+    color: #fff;
+    opacity: 0.7;
+  }
+
+  &__graph-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  
 }
