@@ -449,8 +449,9 @@
 }
 
 .map-widget {
-    height: 330px;
-    width: 330px;
+  height: 330px;
+  width: 330px;
+
   &__adress {
     margin: 192px 0 12px;
     position: absolute;
@@ -459,7 +460,7 @@
     @extend %Montserrat-s2;
     text-align: center;
   }
-  
+
   &__button {
     position: absolute;
     width: 116px;
@@ -469,9 +470,9 @@
   }
 }
 
-#map > ymaps {
-border-radius: 6px;
-overflow: hidden;
+#map>ymaps {
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .ymaps-2-1-79-gotoymaps {
@@ -483,18 +484,19 @@ overflow: hidden;
 }
 
 .ymaps-2-1-79-copyright__link {
-    display: none !important;
+  display: none !important;
 }
 
 .ymaps-2-1-79-copyright__agreement {
-    display: none !important;
+  display: none !important;
 }
 
 .ymaps-2-1-79-copyright__text {
-    display: none !important;
+  display: none !important;
 }
+
 .ymaps-2-1-79-copyright_logo_no {
-    display: none !important;
+  display: none !important;
 }
 
 .donut-widget {
@@ -545,5 +547,103 @@ overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.bar-widget {
+  &__header {
+    margin-bottom: 8px;
+  }
+
+  &__subheader {
+    margin: 0;
+    @extend %h5-font;
+    color: #fff;
+  }
+
+  &__graph-container {
+    .bar {
+      fill: #80cbc4;
+
+      &:first-of-type {
+        fill: linear-gradient($gradient-orange-pink2);
+      }
+    }
+
+    text {
+      font-size: 12px;
+      fill: #fff;
+    }
+
+    path {
+      stroke: none; //убрали полоски слева и снизу
+    }
+
+    line {
+      stroke: grey; //убрали черточки снизу
+    }
+
+    line#limit {
+      stroke: #FED966;
+      stroke-width: 3;
+      stroke-dasharray: 3 6;
+    }
+
+    .grid path {
+      stroke-width: 0;
+    }
+
+    .grid .tick line {
+      stroke: #9FAAAE;
+      stroke-opacity: 0.3;
+    }
+
+    text.divergence {
+      font-size: 12px;
+      fill: #2F4A6D;
+    }
+
+    text.value {
+      font-size: 12px;
+    }
+
+    text.title {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    text.label {
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    text.source {
+      font-size: 10px;
+    }
+  }
+}
+
+.line-widget {
+  &__graph-container {
+    svg {
+      font-family: Sans-Serif, Arial;
+    }
+
+    .line {
+      stroke-width: 4;
+      fill: none;
+    }
+
+    .axis path {
+      stroke: black;
+    }
+
+    .text {
+      font-size: 12px;
+    }
+
+    .title-text {
+      font-size: 12px;
+    }
   }
 }
