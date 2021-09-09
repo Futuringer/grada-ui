@@ -1,7 +1,7 @@
 (function () {
 
   const data = [{
-      name: "1",
+      name: "USA",
       values: [{
           date: "January",
           price: "0"
@@ -33,7 +33,7 @@
       ]
     },
     {
-      name: "2",
+      name: "Maxico",
       values: [{
           date: "January",
           price: "10"
@@ -66,9 +66,76 @@
     }
   ];
 
+  const data2 = [{
+      name: "USA",
+      values: [{
+          date: "January",
+          price: "0"
+        },
+        {
+          date: "February",
+          price: "5"
+        },
+        {
+          date: "March",
+          price: "15"
+        },
+        {
+          date: "April",
+          price: "18"
+        },
+        {
+          date: "May",
+          price: "33"
+        },
+        {
+          date: "June",
+          price: "32"
+        },
+        {
+          date: "July",
+          price: "42"
+        },
+      ]
+    },
+    {
+      name: "Maxico",
+      values: [{
+          date: "January",
+          price: "10"
+        },
+        {
+          date: "February",
+          price: "20"
+        },
+        {
+          date: "March",
+          price: "25"
+        },
+        {
+          date: "April",
+          price: "41"
+        },
+        {
+          date: "May",
+          price: "49"
+        },
+        {
+          date: "June",
+          price: "45"
+        },
+        {
+          date: "July",
+          price: "50"
+        },
+      ]
+    }
+  ]
+
+
   const width = 270;
   const height = 170;
-  const margin = 25;
+  const margin = 50;
   const lineOpacity = "0.25";
   const circleOpacity = "0.85";
   const circleRadius = 3;
@@ -82,6 +149,10 @@
     });
   });
 
+  /* Scale */
+//var x = d3.scaleBand().domain(days).range([0, width]);
+//var y = d3.scaleLinear().range([height, 0]);
+
   const xScale = d3.scaleTime()
     .domain(d3.extent(data[0].values, d => d.date))
     .range([0, width - margin]);
@@ -89,6 +160,8 @@
   const yScale = d3.scaleLinear()
     .domain([0, d3.max(data[1].values, d => d.price)+10])
     .range([height - margin, 0]);
+
+  const color = d3.scaleOrdinal(d3.schemeCategory10);
 
   /* Add SVG */
   const svg = d3.select(".line-widget__graph-container").append("svg")
@@ -103,9 +176,8 @@
     .y(d => yScale(d.price));
 
   let lines = svg.append("g")
-    //.attr("class", "lines");
+    .attr("class", "lines");
 
-const color = ["blue", "pink"]
   lines.selectAll(".line-group")
     .data(data).enter()
     .append("g")
@@ -113,17 +185,14 @@ const color = ["blue", "pink"]
     .append("path")
     .attr("class", "line")
     .attr("d", d => line(d.values))
-    .style("stroke", function (d, i) {
-      return color[i % 2]
-    })
+    .style("stroke", (d, i) => color(i))
     .style("opacity", lineOpacity)
 
   /* Add circles in the line */
   lines.selectAll("circle-group")
     .data(data).enter()
     .append("g")
-    .style("fill", function (d, i) {
-      return color[i % 2]})
+    .style("fill", (d, i) => color(i))
     .selectAll("circle")
     .data(d => d.values).enter()
     .append("g")
@@ -135,8 +204,13 @@ const color = ["blue", "pink"]
     .attr("r", circleRadius)
     .style("opacity", circleOpacity)
 
-  var tickLabels = ['M','T','W','T','F','S','S']
-  const xAxis = d3.axisBottom(xScale).tickFormat(function(d,i){ return tickLabels[i] });
+  /* Add Axis into SVG */
+  const xAxis = d3.axisBottom(xScale)
+  //.ticks(d3.timeParse("months"))
+ // .tickFormat(d3.timeParse("%B"))
+  //.tickSize(-height, 0, 0)
+  //.innerTickSize(-height)
+  //.tickPadding(15);
   const yAxis = d3.axisLeft(yScale).ticks(5).tickSize(-width + margin, 0, 0);
 
   svg.append("g")
@@ -147,4 +221,5 @@ const color = ["blue", "pink"]
   svg.append("g")
     .attr("class", "y axis")
     .call(yAxis)
+
 })()

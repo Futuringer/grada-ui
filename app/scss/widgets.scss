@@ -564,10 +564,6 @@
   &__graph-container {
     .bar {
       fill: #80cbc4;
-
-      &:first-of-type {
-        fill: linear-gradient($gradient-orange-pink2);
-      }
     }
 
     text {
@@ -582,48 +578,21 @@
     line {
       stroke: grey; //убрали черточки снизу
     }
-
-    line#limit {
-      stroke: #FED966;
-      stroke-width: 3;
-      stroke-dasharray: 3 6;
-    }
-
-    .grid path {
-      stroke-width: 0;
-    }
-
-    .grid .tick line {
-      stroke: #9FAAAE;
-      stroke-opacity: 0.3;
-    }
-
-    text.divergence {
-      font-size: 12px;
-      fill: #2F4A6D;
-    }
-
-    text.value {
-      font-size: 12px;
-    }
-
-    text.title {
-      font-size: 22px;
-      font-weight: 600;
-    }
-
-    text.label {
-      font-size: 12px;
-      font-weight: 400;
-    }
-
-    text.source {
-      font-size: 10px;
-    }
   }
 }
 
 .line-widget {
+  &__header {
+    margin-bottom: 8px;
+  }
+
+  &__subheader {
+    @extend %h5-font;
+    margin: 0 0 24px;
+    color: #fff;
+    opacity: 0.7;
+  }
+
   &__graph-container {
     svg {
       font-family: Sans-Serif, Arial;
@@ -634,16 +603,28 @@
       fill: none;
     }
 
-    .axis path {
-      stroke: black;
+
+    .tick line {
+      stroke:grey;
     }
 
-    .text {
+    .axis path {
+      stroke: none;
+    }
+
+    text {
       font-size: 12px;
+      @extend %Montserrat-s2;
     }
 
     .title-text {
       font-size: 12px;
+    }
+
+    .x {
+      line {
+        stroke: none;
+      }
     }
   }
 }
