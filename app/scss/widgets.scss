@@ -423,7 +423,6 @@
 }
 
 .circle-widget {
-
   &__circle-container {
     font-size: 160px;
     margin-bottom: 13px;
@@ -470,7 +469,7 @@
   }
 }
 
-#map>ymaps {
+#map > ymaps {
   border-radius: 6px;
   overflow: hidden;
 }
@@ -603,9 +602,8 @@
       fill: none;
     }
 
-
     .tick line {
-      stroke:grey;
+      stroke: grey;
     }
 
     .axis path {
@@ -625,6 +623,63 @@
       line {
         stroke: none;
       }
+    }
+  }
+}
+
+.bubble-widget {
+  &__header {
+    margin-bottom: 8px;
+  }
+
+  &__subheader {
+    @extend %h5-font;
+    margin: 0 0 24px;
+    color: #fff;
+    opacity: 0.7;
+  }
+
+  &__graph-container {
+    svg {
+      font-family: Sans-Serif, Arial;
+    }
+
+    .line {
+      stroke-width: 4;
+      fill: none;
+    }
+
+    .domain {
+      stroke: none;
+    }
+
+    .tick line {
+      stroke: grey;
+    }
+
+    .axis path {
+      stroke: none;
+    }
+
+    text {
+      @extend %Montserrat-s1;
+    }
+
+    .title-text {
+      font-size: 12px;
+    }
+
+    .x-axe .tick line {
+      stroke: none;
+    }
+  }
+}
+
+.radar-widget {
+  &__graph-container {
+    .legend {
+      @extend %Montserrat-s1;
+      stroke: $grey-B;
     }
   }
 }

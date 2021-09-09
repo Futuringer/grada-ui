@@ -1,13 +1,12 @@
 (function () {
-  const sample = [{
+  const sample = [
+    {
       title: "1",
       value: 30,
-
     },
     {
       title: "2",
       value: 55,
-
     },
     {
       title: "3",
@@ -16,7 +15,7 @@
     {
       title: "4",
       value: 45,
-    }
+    },
   ];
 
   const margin = 30;
@@ -24,44 +23,45 @@
   const height = 200 - 2 * margin;
   const svgContainer = d3.select(".nbar-widget__graph-container");
   const svg = svgContainer.select("svg");
-  const chart = svg.append("g")
-    .attr("transform", `translate(${margin}, ${margin})`)
+  const chart = svg
+    .append("g")
+    .attr("transform", `translate(${margin}, ${margin})`);
 
-  const yScale = d3.scaleLinear()
-    .range([height, 0])
-    .domain([0, 60])
+  const yScale = d3.scaleLinear().range([height, 0]).domain([0, 60]);
 
-  const xScale = d3.scaleBand()
+  const xScale = d3
+    .scaleBand()
     .range([0, width])
     .domain(sample.map((s) => s.title))
-    .padding(0.4)
+    .padding(0.4);
 
-  const makeYLines = () => d3.axisLeft()
-    .scale(yScale)
-    .ticks(5) //количество полосок
+  const makeYLines = () => d3.axisLeft().scale(yScale).ticks(5); //количество полосок
 
-
-  chart.append("g")
+  chart
+    .append("g")
     .attr("transform", `translate(0, ${height})`)
-    .call(d3.axisBottom(xScale).tickFormat(() => ""))
+    .call(d3.axisBottom(xScale).tickFormat(() => ""));
 
-  chart.append("g")
-    .call(d3.axisLeft(yScale)
+  chart.append("g").call(
+    d3
+      .axisLeft(yScale)
       .tickSize(0) //убрали черточки слева
-      .ticks(5)); //количество цифр слева
+      .ticks(5)
+  ); //количество цифр слева
 
-  chart.append("g")
+  chart
+    .append("g")
     .attr("class", "grid")
-    .call(makeYLines()
-      .tickSize(-width, 0, 0)
-      .tickFormat("")
-    )
+    .call(makeYLines().tickSize(-width, 0, 0).tickFormat(""));
 
-  const barGroups = chart.selectAll()
-    .data(sample)
-    .enter()
+  const barGroups = chart.selectAll().data(sample).enter();
   //.append("g")
-  const color = ["url(#MyGradient1)", "url(#MyGradient2)", "url(#MyGradient3)", "url(#MyGradient)"]
+  const color = [
+    "url(#MyGradient1)",
+    "url(#MyGradient2)",
+    "url(#MyGradient3)",
+    "url(#MyGradient)",
+  ];
 
   barGroups
     /*.append("path")
@@ -77,6 +77,6 @@
     .attr("height", (g) => height - yScale(g.value))
     .attr("width", xScale.bandwidth())
     .style("fill", function (d, i) {
-      return color[i % 4] // функция берет цвета по очереди для каждого графика
-    })
-})()
+      return color[i % 4]; // функция берет цвета по очереди для каждого графика
+    });
+})();
