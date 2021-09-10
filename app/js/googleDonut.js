@@ -23,6 +23,7 @@
     const chart = new google.visualization.PieChart(
       document.getElementById("google-donut-widget")
     );
+    
     chart.draw(data, options);
   }
 })();

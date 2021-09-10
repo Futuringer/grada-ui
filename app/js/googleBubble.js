@@ -1,4 +1,5 @@
 (function () {
+
   google.charts.load("current", { packages: ["corechart"] });
   google.charts.setOnLoadCallback(drawChart);
 
@@ -32,6 +33,7 @@
     });
     // var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
     chart.draw(data, options);
-    console.log("googleBubble");
   }
+
 })();
+
