@@ -81,7 +81,6 @@
     .tickSize(-width, 0, 0)
     .tickFormat("")
     .tickSizeOuter(0) //hides outter y line
-  //.tickSizeInner(0) //hides inner y line
 
   graphArea.append("g")
     .call(yGridlines)
@@ -92,9 +91,7 @@
     .selectAll("bar")
     .data(data)
     .enter().append("path")
-    .style("fill", function (d, i) {
-      return color[i % 4]
-    })
+    .style("fill", (d,i) => color[i % 4])
     .attr("d", item => `
         M${x(item.name)},${y(item.value) + ry}
         a${rx},${ry} 0 0 1 ${rx},${-ry}

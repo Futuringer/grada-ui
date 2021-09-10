@@ -77,8 +77,9 @@
 
   /* Format Data */
   const parseDate = d3.timeParse("%B");
-  data.forEach(function (d) {
-    d.values.forEach(function (d) {
+  
+  data.forEach((d) => {
+    d.values.forEach((d) => {
       d.date = parseDate(d.date);
       d.price = +d.price;
     });
@@ -98,8 +99,8 @@
   const svg = d3
     .select(".line-widget__graph-container")
     .append("svg")
-    .attr("width", width + margin + "px")
-    .attr("height", height + margin + "px")
+    .attr("width", `${width + margin}px`)
+    .attr("height", `${width + margin}px`)
     .append("g")
     .attr("transform", `translate(${margin}, ${margin})`);
 
@@ -109,10 +110,9 @@
     .x((d) => xScale(d.date))
     .y((d) => yScale(d.price));
 
-  let lines = svg.append("g");
-  //.attr("class", "lines");
-
+  const lines = svg.append("g");
   const color = ["blue", "pink"];
+
   lines
     .selectAll(".line-group")
     .data(data)
@@ -122,9 +122,7 @@
     .append("path")
     .attr("class", "line")
     .attr("d", (d) => line(d.values))
-    .style("stroke", function (d, i) {
-      return color[i % 2];
-    })
+    .style("stroke", (d, i) => color[i % 2])
     .style("opacity", lineOpacity);
 
   /* Add circles in the line */
@@ -133,9 +131,7 @@
     .data(data)
     .enter()
     .append("g")
-    .style("fill", function (d, i) {
-      return color[i % 2];
-    })
+    .style("fill", (d, i) => color[i % 5])
     .selectAll("circle")
     .data((d) => d.values)
     .enter()
@@ -148,8 +144,8 @@
     .attr("r", circleRadius)
     .style("opacity", circleOpacity);
 
-  var tickLabels = ["M", "T", "W", "T", "F", "S", "S"];
-  const xAxis = d3.axisBottom(xScale).tickFormat(function (d, i) {
+  const tickLabels = ["M", "T", "W", "T", "F", "S", "S"];
+  const xAxis = d3.axisBottom(xScale).tickFormat((d, i) => {
     return tickLabels[i];
   });
   const yAxis = d3

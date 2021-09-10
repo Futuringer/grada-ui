@@ -368,7 +368,7 @@
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  border: ($circle-chart-default-size / 15) solid #cf6a98; //толщина круга-градиента
+  border: ($circle-chart-default-size / 15) solid #cf6a98; // gradient circle thickness
   border-radius: 50%;
   clip: rect(0, $circle-chart-default-size / 2, $circle-chart-default-size, 0);
   position: absolute;
@@ -385,7 +385,7 @@
   bottom: $circle-chart-label / 10;
   color: #fff;
   left: $circle-chart-label / 10;
-  line-height: $circle-chart-label * 0.6; //двигаем надпись 75 верх-низ
+   line-height: $circle-chart-label * 0.6; //label y-positioning
   position: absolute;
   right: $circle-chart-label / 10;
   text-align: center;
@@ -441,6 +441,7 @@
   grid-column: 2 / span 1;
   grid-auto-rows: min-content;
 }
+
 @import "charts";
 @import "widgets";
 @import "footer";

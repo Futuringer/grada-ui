@@ -10,20 +10,21 @@
 
   const yMax = d3.max(dataset, (d) => d.yCoord);
   const xMax = d3.max(dataset, (d) => d.xCoord);
-  //const total = d3.sum(dataset, d => d.yCoord);
-  //const types = dataset.map(d => d.xCoord);
 
-  const margin = { top: 30, right: 30, bottom: 30, left: 30 },
-    width = 295 - margin.left - margin.right,
-    height = 195 - margin.top - margin.bottom;
+  const marginTop = 30;
+  const marginRight = 30;
+  const marginBottom = 30;
+  const marginLeft = 30;
+  const width = 295 - marginLeft - marginRight;
+  const height = 195 - marginTop - marginBottom;
 
   const svg = d3
     .select(".bubble-widget__graph-container")
     .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", width + marginLeft + marginRight)
+    .attr("height", height + marginTop + marginBottom)
     .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", `translate(${marginLeft},${marginTop})`);
 
   // Add X axis
   const x = d3
@@ -33,7 +34,7 @@
 
   svg
     .append("g")
-    .attr("transform", "translate(0," + height + ")")
+    .attr("transform", `translate(0,${height})`)
     .call(d3.axisBottom(x).ticks(7))
     .attr("class", "x-axe");
 

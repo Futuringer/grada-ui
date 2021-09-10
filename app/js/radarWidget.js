@@ -1,6 +1,6 @@
 (function () {
-  var wMaior = 150;
-  var json = [
+  const wMaior = 150;
+  const json = [
     [
       { axis: "Curabitur", value: 6 },
       { axis: "Cociis", value: 4 },
@@ -16,12 +16,12 @@
   }
 
   function drawRadarChart(divId, w, h) {
-    var circleSize = 5;
-    var strokeWidthPolygon = "6px";
+    const circleSize = 5;
+    const strokeWidthPolygon = "6px";
 
-    var RadarChart = {
+    const RadarChart = {
       draw: function (id, data, options) {
-        var cfg = {
+        const cfg = {
           radius: circleSize,
           w: w,
           h: h,
@@ -40,7 +40,7 @@
         };
 
         if ("undefined" !== typeof options) {
-          for (var i in options) {
+          for (let i in options) {
             if ("undefined" !== typeof options[i]) {
               cfg[i] = options[i];
             }
@@ -49,40 +49,25 @@
 
         cfg.maxValue = Math.max(
           cfg.maxValue,
-          d3.max(data, function (i) {
-            return d3.max(
-              i.map(function (o) {
-                return o.value;
-              })
-            );
-          })
+          d3.max(data, (i) => d3.max(i.map((o) => o.value)))
         );
-        var allAxis = data[0].map(function (i, j) {
-          return i.axis;
-        });
-        var total = allAxis.length;
+
+        const allAxis = data[0].map((i) => i.axis);
+        const total = allAxis.length;
+
         d3.select(id).select("svg").remove();
 
-        var g = d3
+        const g = d3
           .select(id)
           .append("svg")
           .attr("width", cfg.w + cfg.ExtraWidthX)
           .attr("height", cfg.h + cfg.ExtraWidthY)
           .attr("class", "graph-svg-component")
           .append("g")
-          .attr(
-            "transform",
-            "translate(" + cfg.TranslateX + "," + cfg.TranslateY + ")"
-          );
+          .attr("transform", `translate(${cfg.TranslateX},${cfg.TranslateY})`);
 
         let series = 0;
-
-        var axis = g
-          .selectAll(".axis")
-          .data(allAxis)
-          .enter()
-          .append("g")
-          .attr("class", axis);
+        const axis = g.selectAll(".axis").data(allAxis).enter().append("g");
 
         axis
           .append("line")
@@ -107,14 +92,10 @@
         axis
           .append("text")
           .attr("class", "legend")
-          .text(function (d) {
-            return d;
-          })
+          .text((d) => d)
           .attr("text-anchor", "middle")
           .attr("dy", "1em")
-          .attr("transform", function (d, i) {
-            return "translate(0, -10)";
-          })
+          .attr("transform", "translate(0, -10)")
           .attr("x", function (d, i) {
             return (
               (cfg.w / 2) *
@@ -145,23 +126,21 @@
                     Math.cos((i * cfg.radians) / total)),
             ]);
           });
+          
           dataValues.push(dataValues[0]);
           g.selectAll(".area")
             .data([dataValues])
             .enter()
             .append("polygon")
-            .attr("class", "radar-chart-series_" + series)
+            .attr("class", `radar-chart-series_ ${series}`)
             .style("stroke-width", strokeWidthPolygon)
             .style("stroke", cfg.color(series))
             .attr("points", function (d) {
-              var str = "";
-              for (var pti = 0; pti < d.length; pti++) {
-                str = str + d[pti][0] + "," + d[pti][1] + " ";
+              let str = "";
+              for (let pti = 0; pti < d.length; pti++) {
+                str = `${str + d[pti][0]},${d[pti][1]} `;
               }
               return str;
-            })
-            .style("fill", function (j, i) {
-              return cfg.color(series);
             })
             .style("fill-opacity", cfg.opacityArea);
           series++;
@@ -171,7 +150,7 @@
     };
 
     // Options for the Radar chart, other than default
-    var myOptions = {
+    const myOptions = {
       w: w,
       h: h,
       ExtraWidthX: 180,

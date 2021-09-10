@@ -1,11 +1,5 @@
 .widgets {
   padding: 0;
-  //display: flex;
-  // justify-content: space-around;
-  //align-items: flex-start;
-  // flex-wrap: wrap;
-  //align-content:initial;
-  //max-width: 1100px;
   justify-items: center;
   display: grid;
   grid-gap: 60px;
@@ -571,11 +565,11 @@
     }
 
     path {
-      stroke: none; //убрали полоски слева и снизу
+      stroke: none; //axes lines
     }
 
     line {
-      stroke: grey; //убрали черточки снизу
+      stroke: grey; //bottom ticks
     }
   }
 }

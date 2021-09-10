@@ -79,10 +79,6 @@ $circle-chart-label: $circle-chart-default-size * 4;
 
 @mixin circle-chart-progress($progress, $color) {
   .pie {
-    .half-circle {
-      //border-color: $color;
-    }
-
     .left-side {
       transform: rotate($progress * 3.6deg);
     }

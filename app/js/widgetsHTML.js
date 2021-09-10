@@ -125,8 +125,6 @@ function setDonutProgress(percent1, percent2, percent3) {
   console.log(offset1, offset3, circumference1, circumference3, percent1);
   circle3.style.transform = `rotate(${(percent2+percent1)*3.6-90}deg)`;
 
-  let number = "1,455"
-
-  document.querySelector(".donut-widget__number").textContent = number;
+  document.querySelector(".donut-widget__number").textContent = "1,455";
 };
 setDonutProgress(33, 33, 34);
