@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--chart js-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!--google charts-->
+  <!--<script type="text/javascript">google.charts.load('current', {packages: ['corechart','line']});</script>-->
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -207,6 +210,15 @@
             <div class="radar-widget__graph-container">
             </div>
           </div>
+
+          <div class="widget google-line-widget">
+            <button class="dots-button widget__dots-button"></button>
+            <h3 class="widget__header google-line-widget-widget__header">Lorem Ipsum</h3>
+            <p class="google-line-widget__subheader">Dolor sit amet consectetur</p>
+            <div id="google-line-widget" class="google-line-widget__graph-container">
+            </div>
+          </div>
+
         </div>
 
         <div class="grid2">
@@ -290,6 +302,14 @@
             <h3 class="widget__header line-widget__header">Lorem Ipsum</h3>
             <p class="line-widget__subheader">Dolor sit amet consectetur</p>
             <div class="line-widget__graph-container">
+            </div>
+          </div>
+
+          <div class="widget google-bubble-widget">
+            <button class="dots-button widget__dots-button"></button>
+            <h3 class="widget__header google-bubble__header">Lorem Ipsum</h3>
+            <p class="google-bubble__subheader">Dolor sit amet consectetur</p>
+            <div class="google-bubble__graph-container" id="google-bubble-widget">
             </div>
           </div>
 
@@ -387,6 +407,14 @@
             <h3 class="widget__header bubble-widget__header">Lorem Ipsum</h3>
             <p class="bubble-widget__subheader">Dolor sit amet consectetur</p>
             <div class="bubble-widget__graph-container">
+            </div>
+          </div>
+
+          <div class="widget donut-widget">
+            <button class="dots-button widget__dots-button"></button>
+            <h3 class="widget__header donut-widget__header">Lorem Ipsum</h3>
+            <p class="donut-widget__subheader">Dolor sit amet consectetur</p>
+            <div class="donut-widget__graph-container" id="google-donut-widget">
             </div>
           </div>
 
@@ -670,11 +698,16 @@
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=fce329b4-5dcd-4234-8c4d-214474093353&lang=ru_RU"
     type="text/javascript"></script>
+
   <script src="js/app.min.js"></script>
   <script src="js/barWidgets.js"></script>
   <script src="js/lineWidget.js"></script>
   <script src="js/bubbleWidget.js"></script>
   <script src="js/radarWidget.js"></script>
+  <script src="js/googleLine.js"></script>
+  <script src="js/googleStyle.js"></script>
+  <script src="js/googleBubble.js"></script>
+  <script src="js/googleDonut.js"></script>
 </body>
 
 </html>
