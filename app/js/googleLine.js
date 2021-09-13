@@ -19,6 +19,7 @@
 
     const options = {
       hAxis: {
+        baselineColor: 'none',
         title: "",
         textStyle: {
           color: "#fff",
@@ -26,8 +27,12 @@
           bold: true,
           italic: false,
         },
+        gridlines: {
+          color: "transparent",
+        },
       },
       vAxis: {
+        baselineColor: 'none',
         title: "",
         textStyle: {
           color: "#fff",
@@ -91,9 +96,7 @@
       grad.appendChild(stop);
     }
 
-    const defs =
-      svg.querySelector("defs") ||
-      svg.insertBefore(document.createElementNS(svgNS, "defs"), svg.firstChild);
+    const defs = svg.querySelector("defs") || svg.insertBefore(document.createElementNS(svgNS, "defs"), svg.firstChild);
     return defs.appendChild(grad);
   }
 

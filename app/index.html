@@ -16,11 +16,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/app.min.css">
-  <script type="text/javascript" src="./js/chart.util.js"></script>
 
 </head>
 
 <body>
+ <img src=http://test.loc/img.png>
   <div class="wrapper">
     <header class="header">
       <div class="container">
@@ -213,9 +213,17 @@
 
           <div class="widget google-line-widget">
             <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header google-line-widget-widget__header">Lorem Ipsum</h3>
+            <h3 class="widget__header google-line-widget__header">Lorem Ipsum</h3>
             <p class="google-line-widget__subheader">Dolor sit amet consectetur</p>
             <div id="google-line-widget" class="google-line-widget__graph-container">
+            </div>
+          </div>
+
+          <div class="widget google-bar-widget">
+            <button class="dots-button widget__dots-button"></button>
+            <h3 class="widget__header google-bar-widget__header">Lorem Ipsum</h3>
+            <p class="google-bar-widget__subheader">Dolor sit amet consectetur</p>
+            <div id="google-bar-widget" class="google-bar-widget__graph-container">
             </div>
           </div>
 
@@ -305,11 +313,19 @@
             </div>
           </div>
 
-          <div class="widget google-bubble-widget">
+          <div class="widget google-bubble">
             <button class="dots-button widget__dots-button"></button>
             <h3 class="widget__header google-bubble__header">Lorem Ipsum</h3>
             <p class="google-bubble__subheader">Dolor sit amet consectetur</p>
             <div class="google-bubble__graph-container" id="google-bubble-widget">
+            </div>
+          </div>
+
+          <div class="widget google-area">
+            <button class="dots-button widget__dots-button"></button>
+            <h3 class="widget__header google-area__header">Lorem Ipsum</h3>
+            <p class="google-bubble__subheader">Dolor sit amet consectetur</p>
+            <div class="google-area__graph-container" id="google-area-widget">
             </div>
           </div>
 
@@ -410,11 +426,11 @@
             </div>
           </div>
 
-          <div class="widget donut-widget">
+          <div class="widget google-donut">
             <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header donut-widget__header">Lorem Ipsum</h3>
-            <p class="donut-widget__subheader">Dolor sit amet consectetur</p>
-            <div class="donut-widget__graph-container" id="google-donut-widget">
+            <h3 class="widget__header google-donut__header">Lorem Ipsum</h3>
+            <p class="google-donut__subheader">Dolor sit amet consectetur</p>
+            <div class="google-donut__graph-container" id="google-donut-widget">
             </div>
           </div>
 
@@ -705,9 +721,10 @@
   <script src="js/bubbleWidget.js"></script>
   <script src="js/radarWidget.js"></script>
   <script src="js/googleLine.js"></script>
-  <script src="js/googleStyle.js"></script>
   <script src="js/googleBubble.js"></script>
   <script src="js/googleDonut.js"></script>
+  <script src="js/googleBar.js"></script>
+  <script src="js/googleArea.js"></script>
 </body>
 
 </html>
