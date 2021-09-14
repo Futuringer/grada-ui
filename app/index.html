@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-  <script src="https://d3js.org/d3.v7.min.js"></script> <!--d3-->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/app.min.css">
-<script type="text/javascript" src="./js/chart.util.js"></script>
+  <script type="text/javascript" src="./js/chart.util.js"></script>
 
 </head>
 
@@ -192,31 +192,22 @@
             <p class="gradient-info-widget__category">Sunny and raining</p>
           </div>
 
-          <!--<div class="widget graph-widget">
-            <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header graph-widget__header">Lorem Ipsum</h3>
-            <p class="graph-widget__subheader">Dolor sit amet consectetur</p>
-            <div class="circle-chart__container graph-widget__circle-container">
-              <div class="pie-wrapper progress-30">
-                <p class="label">75%</p>
-                <div class="pie">
-                  <div class="full-circle"></div>
-                  <div class="left-side half-circle"></div>
-                  <div class="right-side half-circle"></div>
-                </div>
-              </div>
-            </div>
-          </div>-->
-
-
           <div class="widget circle-widget">
             <button class="dots-button widget__dots-button"></button>
             <h3 class="widget__header circle-widget__header">Lorem Ipsum</h3>
             <p class="circle-widget__subheader">Dolor sit amet consectetur</p>
-              <div class='circle-widget__graph-container'> 
-              </div>
+            <div class="circle-widget__graph-container">
+            </div>
           </div>
+
+          <div class="widget radar-widget">
+            <button class="dots-button widget__dots-button"></button>
+            <h3 class="widget__header radar-widget__header">Lorem Ipsum</h3>
+            <p class="radar-widget__subheader">Dolor sit amet consectetur</p>
+            <div class="radar-widget__graph-container">
+            </div>
           </div>
+        </div>
 
         <div class="grid2">
           <div class="widget article-widget">
@@ -293,6 +284,15 @@
             <p class="donut-widget__subheader">Dolor sit amet consectetur</p>
             <div class="donut-widget__graph-container"></div>
           </div>
+
+          <div class="widget line-widget">
+            <button class="dots-button widget__dots-button"></button>
+            <h3 class="widget__header line-widget__header">Lorem Ipsum</h3>
+            <p class="line-widget__subheader">Dolor sit amet consectetur</p>
+            <div class="line-widget__graph-container">
+            </div>
+          </div>
+
         </div>
 
         <div class="grid3">
@@ -372,6 +372,22 @@
             <button class="gradient-button map-widget__button">
               <p class="gradient-button__text">get directions</p>
             </button>
+          </div>
+
+          <div class="widget bar-widget">
+            <button class="dots-button widget__dots-button"></button>
+            <h3 class="widget__header bar-widget__header">Lorem Ipsum</h3>
+            <p class="bar-widget__subheader">Dolor sit amet consectetur</p>
+            <div class="bar-widget__graph-container">
+            </div>
+          </div>
+
+          <div class="widget bubble-widget">
+            <button class="dots-button widget__dots-button"></button>
+            <h3 class="widget__header bubble-widget__header">Lorem Ipsum</h3>
+            <p class="bubble-widget__subheader">Dolor sit amet consectetur</p>
+            <div class="bubble-widget__graph-container">
+            </div>
           </div>
 
         </div>
@@ -480,7 +496,7 @@
             <button class="dots-button widget__dots-button"></button>
             <h3 class="widget__header graph-widget__header">Lorem Ipsum</h3>
             <p class="graph-widget__subheader">Dolor sit amet consectetur</p>
-              <div class='graph-widget__graph-container'> 
+              <div class="graph-widget__graph-container"> 
               </div>
           </div>-->
 
@@ -565,7 +581,6 @@
               <div class="stars-rating__star icon-star" id="star5"></div>
             </div>
           </div>
-
         </div>
       </ul>
     </main>
@@ -653,9 +668,13 @@
       </div>
     </footer>
   </div>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=fce329b4-5dcd-4234-8c4d-214474093353&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=fce329b4-5dcd-4234-8c4d-214474093353&lang=ru_RU"
+    type="text/javascript"></script>
   <script src="js/app.min.js"></script>
-
+  <script src="js/barWidgets.js"></script>
+  <script src="js/lineWidget.js"></script>
+  <script src="js/bubbleWidget.js"></script>
+  <script src="js/radarWidget.js"></script>
 </body>
 
 </html>

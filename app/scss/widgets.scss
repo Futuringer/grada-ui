@@ -1,11 +1,5 @@
 .widgets {
   padding: 0;
-  //display: flex;
-  // justify-content: space-around;
-  //align-items: flex-start;
-  // flex-wrap: wrap;
-  //align-content:initial;
-  //max-width: 1100px;
   justify-items: center;
   display: grid;
   grid-gap: 60px;
@@ -423,7 +417,6 @@
 }
 
 .circle-widget {
-
   &__circle-container {
     font-size: 160px;
     margin-bottom: 13px;
@@ -449,8 +442,9 @@
 }
 
 .map-widget {
-    height: 330px;
-    width: 330px;
+  height: 330px;
+  width: 330px;
+
   &__adress {
     margin: 192px 0 12px;
     position: absolute;
@@ -459,7 +453,7 @@
     @extend %Montserrat-s2;
     text-align: center;
   }
-  
+
   &__button {
     position: absolute;
     width: 116px;
@@ -470,8 +464,8 @@
 }
 
 #map > ymaps {
-border-radius: 6px;
-overflow: hidden;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .ymaps-2-1-79-gotoymaps {
@@ -483,18 +477,19 @@ overflow: hidden;
 }
 
 .ymaps-2-1-79-copyright__link {
-    display: none !important;
+  display: none !important;
 }
 
 .ymaps-2-1-79-copyright__agreement {
-    display: none !important;
+  display: none !important;
 }
 
 .ymaps-2-1-79-copyright__text {
-    display: none !important;
+  display: none !important;
 }
+
 .ymaps-2-1-79-copyright_logo_no {
-    display: none !important;
+  display: none !important;
 }
 
 .donut-widget {
@@ -520,6 +515,165 @@ overflow: hidden;
     display: flex;
     justify-content: center;
   }
+}
 
-  
+.bar-widget {
+  &__circle-container {
+    font-size: 160px;
+    margin-bottom: 13px;
+  }
+
+  &__header {
+    text-align: center;
+    margin: 13px 0 10px;
+  }
+
+  &__subheader {
+    @extend %h5-font;
+    text-align: center;
+    margin: 0 0 24px;
+    color: #fff;
+    opacity: 0.7;
+  }
+
+  &__graph-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.bar-widget {
+  &__header {
+    margin-bottom: 8px;
+  }
+
+  &__subheader {
+    margin: 0;
+    @extend %h5-font;
+    color: #fff;
+  }
+
+  &__graph-container {
+    .bar {
+      fill: #80cbc4;
+    }
+
+    text {
+      font-size: 12px;
+      fill: #fff;
+    }
+
+    path {
+      stroke: none; //axes lines
+    }
+
+    line {
+      stroke: grey; //bottom ticks
+    }
+  }
+}
+
+.line-widget {
+  &__header {
+    margin-bottom: 8px;
+  }
+
+  &__subheader {
+    @extend %h5-font;
+    margin: 0 0 24px;
+    color: #fff;
+    opacity: 0.7;
+  }
+
+  &__graph-container {
+    svg {
+      font-family: Sans-Serif, Arial;
+    }
+
+    .line {
+      stroke-width: 4;
+      fill: none;
+    }
+
+    .tick line {
+      stroke: grey;
+    }
+
+    .axis path {
+      stroke: none;
+    }
+
+    text {
+      font-size: 12px;
+      @extend %Montserrat-s2;
+    }
+
+    .title-text {
+      font-size: 12px;
+    }
+
+    .x {
+      line {
+        stroke: none;
+      }
+    }
+  }
+}
+
+.bubble-widget {
+  &__header {
+    margin-bottom: 8px;
+  }
+
+  &__subheader {
+    @extend %h5-font;
+    margin: 0 0 24px;
+    color: #fff;
+    opacity: 0.7;
+  }
+
+  &__graph-container {
+    svg {
+      font-family: Sans-Serif, Arial;
+    }
+
+    .line {
+      stroke-width: 4;
+      fill: none;
+    }
+
+    .domain {
+      stroke: none;
+    }
+
+    .tick line {
+      stroke: grey;
+    }
+
+    .axis path {
+      stroke: none;
+    }
+
+    text {
+      @extend %Montserrat-s1;
+    }
+
+    .title-text {
+      font-size: 12px;
+    }
+
+    .x-axe .tick line {
+      stroke: none;
+    }
+  }
+}
+
+.radar-widget {
+  &__graph-container {
+    .legend {
+      @extend %Montserrat-s1;
+      stroke: $grey-B;
+    }
+  }
 }

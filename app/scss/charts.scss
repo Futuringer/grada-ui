@@ -1,33 +1,22 @@
   .progress-ring {
   &__circle {
-    //position: relative;
     margin: auto;
     transform-origin: center;
     transform: rotate(-90deg);
     transition: stroke-dashoffset 2s;
   }
+  
+  &__shadow {
+    transform-origin: 50% 54.2%;
+    transform: rotate(-90deg);
+    bottom: 10px;
+  }
 
-    &__circle1 {
-    //position: relative;
+    &__circle-base {
     margin: auto;
     transform-origin: center;
     transition: stroke-dashoffset 2s;
   }
-
-    &__circle2 {
-    //position: relative;
-    margin: auto;
-    transform-origin: center;
-    transition: stroke-dashoffset 2s;
-  }
-
-    &__circle3 {
-    //position: relative;
-    margin: auto;
-    transform-origin: center;
-    transition: stroke-dashoffset 2s;
-  }
-
   &__number {
     position: absolute;
     @extend %Montserrat-s3;
