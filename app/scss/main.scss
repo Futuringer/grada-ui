@@ -383,7 +383,7 @@
   filter: drop-shadow($shadow-widget-image);
   border-radius: 50%;
   bottom: $circle-chart-label / 10;
-  color: #fff;
+  color: $label-color-bright;
   left: $circle-chart-label / 10;
    line-height: $circle-chart-label * 0.6; //label y-positioning
   position: absolute;

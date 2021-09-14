@@ -23,8 +23,8 @@
       draw: function (id, data, options) {
         const cfg = {
           radius: circleSize,
-          w: w,
-          h: h,
+          w,
+          h,
           factor: 1.1, //scale
           factorLegend: 0.85,
           levels: 3,
@@ -39,9 +39,9 @@
           color: d3.scaleOrdinal(d3.schemeCategory10),
         };
 
-        if ("undefined" !== typeof options) {
-          for (let i in options) {
-            if ("undefined" !== typeof options[i]) {
+        if (options) {
+          for (i in options) {
+            if (options.hasOwnProperty(i)) {
               cfg[i] = options[i];
             }
           }
@@ -66,8 +66,8 @@
           .append("g")
           .attr("transform", `translate(${cfg.TranslateX},${cfg.TranslateY})`);
 
-        let series = 0;
         const axis = g.selectAll(".axis").data(allAxis).enter().append("g");
+        let series = 0;
 
         axis
           .append("line")
@@ -136,9 +136,9 @@
             .style("stroke-width", strokeWidthPolygon)
             .style("stroke", cfg.color(series))
             .attr("points", function (d) {
-              let str = "";
+              let str = [];
               for (let pti = 0; pti < d.length; pti++) {
-                str = `${str + d[pti][0]},${d[pti][1]} `;
+                str.push(`${d[pti][0]},${d[pti][1]}`);
               }
               return str;
             })
@@ -151,8 +151,8 @@
 
     // Options for the Radar chart, other than default
     const myOptions = {
-      w: w,
-      h: h,
+      w,
+      h,
       ExtraWidthX: 180,
     };
 

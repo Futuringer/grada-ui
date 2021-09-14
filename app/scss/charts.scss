@@ -12,24 +12,11 @@
     bottom: 10px;
   }
 
-    &__circle1 {
+    &__circle-base {
     margin: auto;
     transform-origin: center;
     transition: stroke-dashoffset 2s;
   }
-
-    &__circle2 {
-    margin: auto;
-    transform-origin: center;
-    transition: stroke-dashoffset 2s;
-  }
-
-    &__circle3 {
-    margin: auto;
-    transform-origin: center;
-    transition: stroke-dashoffset 2s;
-  }
-
   &__number {
     position: absolute;
     @extend %Montserrat-s3;

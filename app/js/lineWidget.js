@@ -145,9 +145,7 @@
     .style("opacity", circleOpacity);
 
   const tickLabels = ["M", "T", "W", "T", "F", "S", "S"];
-  const xAxis = d3.axisBottom(xScale).tickFormat((d, i) => {
-    return tickLabels[i];
-  });
+  const xAxis = d3.axisBottom(xScale).tickFormat((d, i) => tickLabels[i]);
   const yAxis = d3
     .axisLeft(yScale)
     .ticks(5)
