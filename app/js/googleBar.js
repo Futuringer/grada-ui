@@ -38,4 +38,7 @@
 
     chart.draw(data, google.charts.Bar.convertOptions(options));
   }
+
+console.log(+"Infinity")
+
 })();

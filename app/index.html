@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--chart js-->
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!--google charts-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!--chart js-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <!--google charts-->
   <!--<script type="text/javascript">google.charts.load('current', {packages: ['corechart','line']});</script>-->
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,523 +22,522 @@
 </head>
 
 <body>
- <img src=http://test.loc/img.png>
-  <div class="wrapper">
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <a class="logo" href="#">
-            <div class="logo__container">
-              <div class="logo__circle logo__first-circle"></div>
-              <div class="logo__circle logo__second-circle"></div>
-              <div class="logo__circle logo__third-circle"></div>
-              <div class="logo__circle logo__fourth-circle"></div>
-            </div>
-            <img class="logo__signature" src="../images/src/GRADA.png">
-            </img>
-          </a>
-          <nav class="menu menu_type_notlogged">
-            <ul class="menu__list">
-              <li class="menu__item menu__item_type_active">
-                <a href="#" class="menu__item-link ">home</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link">work</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link">services</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link">about us</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link">blog</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link">contact</a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="menu menu_type_logged">
-            <ul class="menu__list">
-              <li class="menu__item menu__item_type_active">
-                <a href="#" class="menu__item-link ">
-                  <div class="menu__item-image icon-menuoverview"></div>
-                  <p class="menu__item-text">overview</p>
-                </a>
-                <div class="menu__divider"></div>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link ">
-                  <div class="menu__item-image icon-menymywebsites"></div>
-                  <p class="menu__item-text">my websites</p>
-                </a>
-                <div class="menu__divider"></div>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link ">
-                  <div class="menu__item-image icon-menudomains"></div>
-                  <p class="menu__item-text">domains</p>
-                </a>
-                <div class="menu__divider"></div>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link ">
-                  <div class="menu__item-image icon-menunotifications"></div>
-                  <p class="menu__item-text">notifications</p>
-                </a>
-                <div class="menu__divider"></div>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link ">
-                  <div class="menu__item-image icon-menusettings"></div>
-                  <p class="menu__item-text">settings</p>
-                </a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link ">
-                  <div class="menu__item-logo icon-search">
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </nav>
+  <img src=http://test.loc/img.png> <div class="wrapper">
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="logo" href="#">
+          <div class="logo__container">
+            <div class="logo__circle logo__first-circle"></div>
+            <div class="logo__circle logo__second-circle"></div>
+            <div class="logo__circle logo__third-circle"></div>
+            <div class="logo__circle logo__fourth-circle"></div>
+          </div>
+          <img class="logo__signature" src="../images/src/GRADA.png">
+          </img>
+        </a>
+        <nav class="menu menu_type_notlogged">
+          <ul class="menu__list">
+            <li class="menu__item menu__item_type_active">
+              <a href="#" class="menu__item-link ">home</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">work</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">services</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">about us</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">blog</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">contact</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="menu menu_type_logged">
+          <ul class="menu__list">
+            <li class="menu__item menu__item_type_active">
+              <a href="#" class="menu__item-link ">
+                <div class="menu__item-image icon-menuoverview"></div>
+                <p class="menu__item-text">overview</p>
+              </a>
+              <div class="menu__divider"></div>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link ">
+                <div class="menu__item-image icon-menymywebsites"></div>
+                <p class="menu__item-text">my websites</p>
+              </a>
+              <div class="menu__divider"></div>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link ">
+                <div class="menu__item-image icon-menudomains"></div>
+                <p class="menu__item-text">domains</p>
+              </a>
+              <div class="menu__divider"></div>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link ">
+                <div class="menu__item-image icon-menunotifications"></div>
+                <p class="menu__item-text">notifications</p>
+              </a>
+              <div class="menu__divider"></div>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link ">
+                <div class="menu__item-image icon-menusettings"></div>
+                <p class="menu__item-text">settings</p>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link ">
+                <div class="menu__item-logo icon-search">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-          <div class="user-presentment ">
-            <div class="icon-check check-mark"></div>
-            <!--изменит ьна баттон-->
-            <p class="user-name">cosmin negoita</p>
-            <button class="search-button__container">
-              <div class="search-button__image icon-search"></div>
-            </button>
-            <div class="person-logo__background header__logo-background">
-              <img src="./images/src/avatar.jpg" alt="avatar" class="person-logo__image header__logo-image">
-            </div>
+        <div class="user-presentment ">
+          <div class="icon-check check-mark"></div>
+          <!--изменит ьна баттон-->
+          <p class="user-name">cosmin negoita</p>
+          <button class="search-button__container">
+            <div class="search-button__image icon-search"></div>
+          </button>
+          <div class="person-logo__background header__logo-background">
+            <img src="./images/src/avatar.jpg" alt="avatar" class="person-logo__image header__logo-image">
           </div>
-          <div class="entrance-buttons-container">
-            <button class="entrance-button">login</button>
-            <button class="entrance-button entrance-button_type_active">register</button>
-          </div>
+        </div>
+        <div class="entrance-buttons-container">
+          <button class="entrance-button">login</button>
+          <button class="entrance-button entrance-button_type_active">register</button>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main class="main container">
-      <form>
-        <input type="radio" name="choice" value="yes" id="choice1">
-        <label for="choice-yes">1</label>
-        <input type="radio" name="choice" value="no" id="choice2">
-        <label for="choice-no">2</label>
-        <button id="btn">switch</button>
-      </form>
-      <ul class="widgets">
+  <main class="main container">
+    <form>
+      <input type="radio" name="choice" value="yes" id="choice1">
+      <label for="choice-yes">1</label>
+      <input type="radio" name="choice" value="no" id="choice2">
+      <label for="choice-no">2</label>
+      <button id="btn">switch</button>
+    </form>
+    <ul class="widgets">
 
-        <div class="grid1">
-          <div class="widget simple-text-widget">
-            <h3 class="widget__header">Simple Text Widget</h3>
-            <div class="widget__text">
-              <p class="widget__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus
-                egestas
-                elit, at eleifend elit ornare ut</p>
-              <p class="widget__paragraph">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                inceptos himenaeos.</p>
-            </div>
-            <button class="gradient-button simple-text-widget__button">
-              <p class="gradient-button__text">find out more</p>
-              <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
-            </button>
+      <div class="grid1">
+        <div class="widget simple-text-widget">
+          <h3 class="widget__header">Simple Text Widget</h3>
+          <div class="widget__text">
+            <p class="widget__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus
+              egestas
+              elit, at eleifend elit ornare ut</p>
+            <p class="widget__paragraph">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos.</p>
           </div>
-
-          <div class="widget list-widget">
-            <h3 class="widget__header">List Widget</h3>
-            <ul class="list-widget__list">
-              <li class="list-widget__item">
-                <p class="list-widget__text">Lorem ipsum dolor</p>
-                <p class="list-widget__number">26</p>
-              </li>
-              <li class="list-widget__item">
-                <p class="list-widget__text">Curabitur eget</p>
-                <p class="list-widget__number">18</p>
-              </li>
-              <li class="list-widget__item">
-                <p class="list-widget__text">Class aptent tacti</p>
-                <p class="list-widget__number">21</p>
-              </li>
-              <li class="list-widget__item">
-                <p class="list-widget__text">Sociosqu litora</p>
-                <p class="list-widget__number">87</p>
-              </li>
-              <li class="list-widget__item">
-                <p class="list-widget__text">Torquent conubia</p>
-                <p class="list-widget__number">65</p>
-              </li>
-              <li class="list-widget__item">
-                <p class="list-widget__text">Inceptos himenaeos</p>
-                <p class="list-widget__number">21</p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="widget background-image-widget">
-            <button class="widget__side-button article-text-widget__side-button">
-              <div class="widget__side-button-logo icon-forum article-text-widget__side-button-logo"></div>
-              <p class="widget__side-button-text article-text-widget__side-button-text">26</p>
-            </button>
-            <p class="widget__category background-image-widget__category">category</p>
-            <h3 class="widget__header background-image-widget__header">Lorem Ipsum dolor sit amet consectetur</h3>
-            <p class="widget__date background-image-widget__date">Jan 13th, 2018</p>
-          </div>
-
-          <div class="widget gradient-info-widget">
-            <button class="dots-button widget__dots-button"></button>
-            <img src="./images/src/clouds.svg" alt="" class="gradient-info-widget__image">
-            <p class="gradient-info-widget__text">18ºC</p>
-            <h3 class="widget__header gradient-info-widget__header">Craiova, RO</h3>
-            <p class="gradient-info-widget__category">Sunny and raining</p>
-          </div>
-
-          <div class="widget circle-widget">
-            <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header circle-widget__header">Lorem Ipsum</h3>
-            <p class="circle-widget__subheader">Dolor sit amet consectetur</p>
-            <div class="circle-widget__graph-container">
-            </div>
-          </div>
-
-          <div class="widget radar-widget">
-            <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header radar-widget__header">Lorem Ipsum</h3>
-            <p class="radar-widget__subheader">Dolor sit amet consectetur</p>
-            <div class="radar-widget__graph-container">
-            </div>
-          </div>
-
-          <div class="widget google-line-widget">
-            <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header google-line-widget__header">Lorem Ipsum</h3>
-            <p class="google-line-widget__subheader">Dolor sit amet consectetur</p>
-            <div id="google-line-widget" class="google-line-widget__graph-container">
-            </div>
-          </div>
-
-          <div class="widget google-bar-widget">
-            <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header google-bar-widget__header">Lorem Ipsum</h3>
-            <p class="google-bar-widget__subheader">Dolor sit amet consectetur</p>
-            <div id="google-bar-widget" class="google-bar-widget__graph-container">
-            </div>
-          </div>
-
+          <button class="gradient-button simple-text-widget__button">
+            <p class="gradient-button__text">find out more</p>
+            <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
+          </button>
         </div>
 
-        <div class="grid2">
-          <div class="widget article-widget">
-            <h3 class="widget__header">Article Widget</h3>
-            <ul class="article-widget__articles">
-              <li class="article-widget__article ">
-                <img src="./images/src/imagemountains.jpg" alt="" class="article-widget__article-image">
-                <div class="article-widget__article-description">
-                  <p class="widget__category">Category</p>
-                  <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
-                  <p class="widget__date">Jan 13th, 2018</p>
-                </div>
-              </li>
-              <li class="article-widget__article">
-                <img src="./images/src/imagepolice-car.jpg" alt="" class="article-widget__article-image">
-                <div class="article-widget__article-description">
-                  <p class="widget__category">Category</p>
-                  <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
-                  <p class="widget__date">Jan 13th, 2018</p>
-                </div>
-              </li>
-              <li class="article-widget__article">
-                <img src="./images/src/imagewinterMountains.jpg" alt="" class="article-widget__article-image">
-                <div class="article-widget__article-description">
-                  <p class="widget__category">Category</p>
-                  <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
-                  <p class="widget__date">Jan 13th, 2018</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="widget image-text-widget">
-            <img src="./images/src/smoker.jpg" alt="guy smoking" class="widget__top-half-image">
-            <h3 class="widget__header">Image Text Widget</h3>
-            <p class="widget__text image-text-widget__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nulla faucibus egestas
-              elit, at eleifend elit ornare ut.</p>
-            <button class="gradient-button">
-              <p class="gradient-button__text">find out more</p>
-              <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
-            </button>
-          </div>
-
-          <div class="widget product-review-widget">
-            <button class="widget__side-button product-review-widget__side-button">
-              <!--<div class="widget__side-button-logo icon-forum product-review-widget__side-button-logo"></div>-->
-              <p class="widget__side-button-text product-review-widget__side-button-text">$150</p>
-            </button>
-            <button class="dots-button widget__dots-button"></button>
-            <img src="./images/src/MackBook15.png" alt="" class="product-review-widget__central-image">
-            <p class="widget__category product-review-widget__category">category</p>
-            <h3 class="widget__header product-review-widget__header">MacBook Pro 15” 2017 Remake</h3>
-            <div class="stars-rating">
-              <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star1"></div>
-              <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star2"></div>
-              <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star3"></div>
-              <div class="stars-rating__star icon-star" id="star4"></div>
-              <div class="stars-rating__star icon-star" id="star5"></div>
-            </div>
-          </div>
-
-          <div class="widget gradient-info-widget">
-            <button class="dots-button widget__dots-button"></button>
-            <img src="./images/src/images.svg" alt="" class="gradient-info-widget__image">
-            <p class="gradient-info-widget__text">2,564</p>
-            <h3 class="widget__header gradient-info-widget__header">Messages</h3>
-            <p class="gradient-info-widget__category">Posted by our users</p>
-          </div>
-
-          <div class="widget donut-widget">
-            <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header donut-widget__header">Lorem Ipsum</h3>
-            <p class="donut-widget__subheader">Dolor sit amet consectetur</p>
-            <div class="donut-widget__graph-container"></div>
-          </div>
-
-          <div class="widget line-widget">
-            <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header line-widget__header">Lorem Ipsum</h3>
-            <p class="line-widget__subheader">Dolor sit amet consectetur</p>
-            <div class="line-widget__graph-container">
-            </div>
-          </div>
-
-          <div class="widget google-bubble">
-            <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header google-bubble__header">Lorem Ipsum</h3>
-            <p class="google-bubble__subheader">Dolor sit amet consectetur</p>
-            <div class="google-bubble__graph-container" id="google-bubble-widget">
-            </div>
-          </div>
-
-          <div class="widget google-area">
-            <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header google-area__header">Lorem Ipsum</h3>
-            <p class="google-bubble__subheader">Dolor sit amet consectetur</p>
-            <div class="google-area__graph-container" id="google-area-widget">
-            </div>
-          </div>
-
+        <div class="widget widget_list">
+          <h3 class="widget__header">List Widget</h3>
+          <ul class="list-widget__list">
+            <li class="list-widget__item">
+              <p class="list-widget__text">Lorem ipsum dolor</p>
+              <p class="list-widget__number">26</p>
+            </li>
+            <li class="list-widget__item">
+              <p class="list-widget__text">Curabitur eget</p>
+              <p class="list-widget__number">18</p>
+            </li>
+            <li class="list-widget__item">
+              <p class="list-widget__text">Class aptent tacti</p>
+              <p class="list-widget__number">21</p>
+            </li>
+            <li class="list-widget__item">
+              <p class="list-widget__text">Sociosqu litora</p>
+              <p class="list-widget__number">87</p>
+            </li>
+            <li class="list-widget__item">
+              <p class="list-widget__text">Torquent conubia</p>
+              <p class="list-widget__number">65</p>
+            </li>
+            <li class="list-widget__item">
+              <p class="list-widget__text">Inceptos himenaeos</p>
+              <p class="list-widget__number">21</p>
+            </li>
+          </ul>
         </div>
 
-        <div class="grid3">
-          <div class="widget details-widget">
-            <h3 class="widget__header">Details Widget</h3>
-
-            <ul class="details-widget__list">
-              <li class="details-widget__item ">
-                <div class="details-widget__logo icon-group"></div>
-                <div class="details-widget__text-block">
-                  <h5 class="details-widget__text-header">Lorem Ipsum Dolor Amet</h5>
-                  <p class="details-widget__text">Lorem Ipsum</p>
-                </div>
-              </li>
-
-              <li class="details-widget__item ">
-                <div class="details-widget__logo icon-devices"></div>
-                <div class="details-widget__text-block">
-                  <h5 class="details-widget__text-header">Lorem Ipsum Dolor Amet</h5>
-                  <p class="details-widget__text">Lorem Ipsum</p>
-                </div>
-              </li>
-
-              <li class="details-widget__item">
-                <div class="details-widget__logo icon-wallpaper"></div>
-                <div class="details-widget__text-block">
-                  <h5 class="details-widget__text-header">Lorem Ipsum Dolor Amet</h5>
-                  <p class="details-widget__text">Lorem Ipsum</p>
-                </div>
-              </li>
-            </ul>
-            <button class="gradient-button">
-              <p class="gradient-button__text">find out more</p>
-              <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
-            </button>
-          </div>
-
-          <div class="widget article-text-widget">
-            <img src="./images/src/widgetMountainsRiverForest.jpg" alt="guy smoking" class="widget__top-half-image">
-            <div class="person-logo__background article-text-widget__avatar-background">
-              <img src="./images/src/avatar.jpg" alt="avatar"
-                class="person-logo__image article-text-widget__avatar-image">
-            </div>
-            <button class="widget__side-button article-text-widget__side-button">
-              <div class="widget__side-button-logo icon-forum article-text-widget__side-button-logo"></div>
-              <p class="widget__side-button-text article-text-widget__side-button-text">25</p>
-            </button>
-            <p class="widget__category article-text-widget__category">Lorem Ipsum</p>
-            <h3 class="widget__header article-text-widget__header">Lorem Ipsum dolor sit amet consectetur</h3>
-            <p class="widget__date article-text-widget__category">Jan 13th, 2018</p>
-            <p class="widget__text image-text-widget__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nulla faucibus egestas
-              elit, at eleifend elit ornare ut.</p>
-            <button class="gradient-button">
-              <p class="gradient-button__text">read article</p>
-              <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
-            </button>
-          </div>
-
-          <div class="widget person-widget">
-            <div class="person-logo__background person-widget__avatar-background">
-              <img src="./images/src/webDesignerAvatar.jpg" alt="avatar"
-                class="person-logo__image person-widget__avatar-image">
-            </div>
-            <button class="dots-button widget__dots-button"></button>
-            <p class="widget__category person-widget__category">Web Designer</p>
-            <h3 class="widget__header person-widget__name">Alejandro Suarez</h3>
-            <p class="person-widget__location">Craiova, RO</p>
-          </div>
-
-          <div class="widget map-widget">
-            <div id="map" style="width: 330px; height: 330px; z-index: 0; "></div>
-            <p class="map-widget__adress">
-              138 Mount Pleasant<br>
-              Bracknell, RG12 9EA <br>
-              Berkshire, UK</p>
-            <button class="gradient-button map-widget__button">
-              <p class="gradient-button__text">get directions</p>
-            </button>
-          </div>
-
-          <div class="widget bar-widget">
-            <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header bar-widget__header">Lorem Ipsum</h3>
-            <p class="bar-widget__subheader">Dolor sit amet consectetur</p>
-            <div class="bar-widget__graph-container">
-            </div>
-          </div>
-
-          <div class="widget bubble-widget">
-            <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header bubble-widget__header">Lorem Ipsum</h3>
-            <p class="bubble-widget__subheader">Dolor sit amet consectetur</p>
-            <div class="bubble-widget__graph-container">
-            </div>
-          </div>
-
-          <div class="widget google-donut">
-            <button class="dots-button widget__dots-button"></button>
-            <h3 class="widget__header google-donut__header">Lorem Ipsum</h3>
-            <p class="google-donut__subheader">Dolor sit amet consectetur</p>
-            <div class="google-donut__graph-container" id="google-donut-widget">
-            </div>
-          </div>
-
+        <div class="widget background-image-widget">
+          <button class="widget__side-button article-text-widget__side-button">
+            <div class="widget__side-button-logo icon-forum article-text-widget__side-button-logo"></div>
+            <p class="widget__side-button-text article-text-widget__side-button-text">26</p>
+          </button>
+          <p class="widget__category background-image-widget__category">category</p>
+          <h3 class="widget__header background-image-widget__header">Lorem Ipsum dolor sit amet consectetur</h3>
+          <p class="widget__date background-image-widget__date">Jan 13th, 2018</p>
         </div>
 
-        <div class="grid4">
-          <div class="widget simple-text-widget">
-            <h3 class="widget__header">Simple Text Widget</h3>
-            <div class="widget__text">
-              <p class="widget__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus
-                egestas
-                elit, at eleifend elit ornare ut</p>
-              <p class="widget__paragraph">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                inceptos himenaeos.</p>
-            </div>
-            <button class="gradient-button simple-text-widget__button">
-              <p class="gradient-button__text">find out more</p>
-              <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
-            </button>
+        <div class="widget gradient-info-widget">
+          <button class="dots-button widget__dots-button"></button>
+          <img src="./images/src/clouds.svg" alt="" class="gradient-info-widget__image">
+          <p class="gradient-info-widget__text">18ºC</p>
+          <h3 class="widget__header gradient-info-widget__header">Craiova, RO</h3>
+          <p class="gradient-info-widget__category">Sunny and raining</p>
+        </div>
+
+        <div class="widget circle-widget">
+          <button class="dots-button widget__dots-button"></button>
+          <h3 class="widget__header circle-widget__header">Lorem Ipsum</h3>
+          <p class="circle-widget__subheader">Dolor sit amet consectetur</p>
+          <div class="circle-widget__graph-container">
           </div>
+        </div>
 
-          <div class="widget list-widget">
-            <h3 class="widget__header">List Widget</h3>
-            <ul class="list-widget__list">
-              <li class="list-widget__item">
-                <p class="list-widget__text">Lorem ipsum dolor</p>
-                <p class="list-widget__number">26</p>
-              </li>
-              <li class="list-widget__item">
-                <p class="list-widget__text">Curabitur eget</p>
-                <p class="list-widget__number">18</p>
-              </li>
-              <li class="list-widget__item">
-                <p class="list-widget__text">Class aptent tacti</p>
-                <p class="list-widget__number">21</p>
-              </li>
-              <li class="list-widget__item">
-                <p class="list-widget__text">Sociosqu litora</p>
-                <p class="list-widget__number">87</p>
-              </li>
-              <li class="list-widget__item">
-                <p class="list-widget__text">Torquent conubia</p>
-                <p class="list-widget__number">65</p>
-              </li>
-              <li class="list-widget__item">
-                <p class="list-widget__text">Inceptos himenaeos</p>
-                <p class="list-widget__number">21</p>
-              </li>
-            </ul>
+        <div class="widget radar-widget">
+          <button class="dots-button widget__dots-button"></button>
+          <h3 class="widget__header radar-widget__header">Lorem Ipsum</h3>
+          <p class="radar-widget__subheader">Dolor sit amet consectetur</p>
+          <div class="radar-widget__graph-container">
           </div>
+        </div>
 
-          <div class="widget details-widget">
-            <h3 class="widget__header">Details Widget</h3>
-
-            <ul class="details-widget__list">
-              <li class="details-widget__item ">
-                <div class="details-widget__logo icon-group"></div>
-                <div class="details-widget__text-block">
-                  <h5 class="details-widget__text-header">Lorem Ipsum Dolor Amet</h5>
-                  <p class="details-widget__text">Lorem Ipsum</p>
-                </div>
-              </li>
-
-              <li class="details-widget__item ">
-                <div class="details-widget__logo icon-devices"></div>
-                <div class="details-widget__text-block">
-                  <h5 class="details-widget__text-header">Lorem Ipsum Dolor Amet</h5>
-                  <p class="details-widget__text">Lorem Ipsum</p>
-                </div>
-              </li>
-
-              <li class="details-widget__item">
-                <div class="details-widget__logo icon-wallpaper"></div>
-                <div class="details-widget__text-block">
-                  <h5 class="details-widget__text-header">Lorem Ipsum Dolor Amet</h5>
-                  <p class="details-widget__text">Lorem Ipsum</p>
-                </div>
-              </li>
-            </ul>
-            <button class="gradient-button">
-              <p class="gradient-button__text">find out more</p>
-              <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
-            </button>
+        <div class="widget google-line-widget">
+          <button class="dots-button widget__dots-button"></button>
+          <h3 class="widget__header google-line-widget__header">Lorem Ipsum</h3>
+          <p class="google-line-widget__subheader">Dolor sit amet consectetur</p>
+          <div id="google-line-widget" class="google-line-widget__graph-container">
           </div>
-          <div class="widget background-image-widget">
-            <button class="widget__side-button article-text-widget__side-button">
-              <div class="widget__side-button-logo icon-forum article-text-widget__side-button-logo"></div>
-              <p class="widget__side-button-text article-text-widget__side-button-text">26</p>
-            </button>
-            <p class="widget__category background-image-widget__category">category</p>
-            <h3 class="widget__header background-image-widget__header">Lorem Ipsum dolor sit amet consectetur</h3>
-            <p class="widget__date background-image-widget__date">Jan 13th, 2018</p>
-          </div>
+        </div>
 
-          <div class="widget person-widget">
-            <div class="person-logo__background person-widget__avatar-background">
-              <img src="./images/src/webDesignerAvatar.jpg" alt="avatar"
-                class="person-logo__image person-widget__avatar-image">
-            </div>
-            <button class="dots-button widget__dots-button"></button>
-            <p class="widget__category person-widget__category">Web Designer</p>
-            <h3 class="widget__header person-widget__name">Alejandro Suarez</h3>
-            <p class="person-widget__location">Craiova, RO</p>
+        <div class="widget google-bar-widget">
+          <button class="dots-button widget__dots-button"></button>
+          <h3 class="widget__header google-bar-widget__header">Lorem Ipsum</h3>
+          <p class="google-bar-widget__subheader">Dolor sit amet consectetur</p>
+          <div id="google-bar-widget" class="google-bar-widget__graph-container">
           </div>
+        </div>
 
-          <!--<div class="widget graph-widget">
+      </div>
+
+      <div class="grid2">
+        <div class="widget article-widget">
+          <h3 class="widget__header">Article Widget</h3>
+          <ul class="article-widget__articles">
+            <li class="article-widget__article ">
+              <img src="./images/src/imagemountains.jpg" alt="" class="article-widget__article-image">
+              <div class="article-widget__article-description">
+                <p class="widget__category">Category</p>
+                <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
+                <p class="widget__date">Jan 13th, 2018</p>
+              </div>
+            </li>
+            <li class="article-widget__article">
+              <img src="./images/src/imagepolice-car.jpg" alt="" class="article-widget__article-image">
+              <div class="article-widget__article-description">
+                <p class="widget__category">Category</p>
+                <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
+                <p class="widget__date">Jan 13th, 2018</p>
+              </div>
+            </li>
+            <li class="article-widget__article">
+              <img src="./images/src/imagewinterMountains.jpg" alt="" class="article-widget__article-image">
+              <div class="article-widget__article-description">
+                <p class="widget__category">Category</p>
+                <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
+                <p class="widget__date">Jan 13th, 2018</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="widget image-text-widget">
+          <img src="./images/src/smoker.jpg" alt="guy smoking" class="widget__top-half-image">
+          <h3 class="widget__header">Image Text Widget</h3>
+          <p class="widget__text image-text-widget__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nulla faucibus egestas
+            elit, at eleifend elit ornare ut.</p>
+          <button class="gradient-button">
+            <p class="gradient-button__text">find out more</p>
+            <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
+          </button>
+        </div>
+
+        <div class="widget product-review-widget">
+          <button class="widget__side-button product-review-widget__side-button">
+            <!--<div class="widget__side-button-logo icon-forum product-review-widget__side-button-logo"></div>-->
+            <p class="widget__side-button-text product-review-widget__side-button-text">$150</p>
+          </button>
+          <button class="dots-button widget__dots-button"></button>
+          <img src="./images/src/MackBook15.png" alt="" class="product-review-widget__central-image">
+          <p class="widget__category product-review-widget__category">category</p>
+          <h3 class="widget__header product-review-widget__header">MacBook Pro 15” 2017 Remake</h3>
+          <div class="stars-rating">
+            <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star1"></div>
+            <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star2"></div>
+            <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star3"></div>
+            <div class="stars-rating__star icon-star" id="star4"></div>
+            <div class="stars-rating__star icon-star" id="star5"></div>
+          </div>
+        </div>
+
+        <div class="widget gradient-info-widget">
+          <button class="dots-button widget__dots-button"></button>
+          <img src="./images/src/images.svg" alt="" class="gradient-info-widget__image">
+          <p class="gradient-info-widget__text">2,564</p>
+          <h3 class="widget__header gradient-info-widget__header">Messages</h3>
+          <p class="gradient-info-widget__category">Posted by our users</p>
+        </div>
+
+        <div class="widget donut-widget">
+          <button class="dots-button widget__dots-button"></button>
+          <h3 class="widget__header donut-widget__header">Lorem Ipsum</h3>
+          <p class="donut-widget__subheader">Dolor sit amet consectetur</p>
+          <div class="donut-widget__graph-container"></div>
+        </div>
+
+        <div class="widget line-widget">
+          <button class="dots-button widget__dots-button"></button>
+          <h3 class="widget__header line-widget__header">Lorem Ipsum</h3>
+          <p class="line-widget__subheader">Dolor sit amet consectetur</p>
+          <div class="line-widget__graph-container">
+          </div>
+        </div>
+
+        <div class="widget google-bubble">
+          <button class="dots-button widget__dots-button"></button>
+          <h3 class="widget__header google-bubble__header">Lorem Ipsum</h3>
+          <p class="google-bubble__subheader">Dolor sit amet consectetur</p>
+          <div class="google-bubble__graph-container" id="google-bubble-widget">
+          </div>
+        </div>
+
+        <div class="widget google-area">
+          <button class="dots-button widget__dots-button"></button>
+          <h3 class="widget__header google-area__header">Lorem Ipsum</h3>
+          <p class="google-bubble__subheader">Dolor sit amet consectetur</p>
+          <div class="google-area__graph-container" id="google-area-widget">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="grid3">
+        <div class="widget details-widget">
+          <h3 class="widget__header">Details Widget</h3>
+
+          <ul class="details-widget__list">
+            <li class="details-widget__item ">
+              <div class="details-widget__logo icon-group"></div>
+              <div class="details-widget__text-block">
+                <h5 class="details-widget__text-header">Lorem Ipsum Dolor Amet</h5>
+                <p class="details-widget__text">Lorem Ipsum</p>
+              </div>
+            </li>
+
+            <li class="details-widget__item ">
+              <div class="details-widget__logo icon-devices"></div>
+              <div class="details-widget__text-block">
+                <h5 class="details-widget__text-header">Lorem Ipsum Dolor Amet</h5>
+                <p class="details-widget__text">Lorem Ipsum</p>
+              </div>
+            </li>
+
+            <li class="details-widget__item">
+              <div class="details-widget__logo icon-wallpaper"></div>
+              <div class="details-widget__text-block">
+                <h5 class="details-widget__text-header">Lorem Ipsum Dolor Amet</h5>
+                <p class="details-widget__text">Lorem Ipsum</p>
+              </div>
+            </li>
+          </ul>
+          <button class="gradient-button">
+            <p class="gradient-button__text">find out more</p>
+            <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
+          </button>
+        </div>
+
+        <div class="widget article-text-widget">
+          <img src="./images/src/widgetMountainsRiverForest.jpg" alt="guy smoking" class="widget__top-half-image">
+          <div class="person-logo__background article-text-widget__avatar-background">
+            <img src="./images/src/avatar.jpg" alt="avatar"
+              class="person-logo__image article-text-widget__avatar-image">
+          </div>
+          <button class="widget__side-button article-text-widget__side-button">
+            <div class="widget__side-button-logo icon-forum article-text-widget__side-button-logo"></div>
+            <p class="widget__side-button-text article-text-widget__side-button-text">25</p>
+          </button>
+          <p class="widget__category article-text-widget__category">Lorem Ipsum</p>
+          <h3 class="widget__header article-text-widget__header">Lorem Ipsum dolor sit amet consectetur</h3>
+          <p class="widget__date article-text-widget__category">Jan 13th, 2018</p>
+          <p class="widget__text image-text-widget__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nulla faucibus egestas
+            elit, at eleifend elit ornare ut.</p>
+          <button class="gradient-button">
+            <p class="gradient-button__text">read article</p>
+            <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
+          </button>
+        </div>
+
+        <div class="widget person-widget">
+          <div class="person-logo__background person-widget__avatar-background">
+            <img src="./images/src/webDesignerAvatar.jpg" alt="avatar"
+              class="person-logo__image person-widget__avatar-image">
+          </div>
+          <button class="dots-button widget__dots-button"></button>
+          <p class="widget__category person-widget__category">Web Designer</p>
+          <h3 class="widget__header person-widget__name">Alejandro Suarez</h3>
+          <p class="person-widget__location">Craiova, RO</p>
+        </div>
+
+        <div class="widget map-widget">
+          <div id="map" style="width: 330px; height: 330px; z-index: 0; "></div>
+          <p class="map-widget__adress">
+            138 Mount Pleasant<br>
+            Bracknell, RG12 9EA <br>
+            Berkshire, UK</p>
+          <button class="gradient-button map-widget__button">
+            <p class="gradient-button__text">get directions</p>
+          </button>
+        </div>
+
+        <div class="widget bar-widget">
+          <button class="dots-button widget__dots-button"></button>
+          <h3 class="widget__header bar-widget__header">Lorem Ipsum</h3>
+          <p class="bar-widget__subheader">Dolor sit amet consectetur</p>
+          <div class="bar-widget__graph-container">
+          </div>
+        </div>
+
+        <div class="widget bubble-widget">
+          <button class="dots-button widget__dots-button"></button>
+          <h3 class="widget__header bubble-widget__header">Lorem Ipsum</h3>
+          <p class="bubble-widget__subheader">Dolor sit amet consectetur</p>
+          <div class="bubble-widget__graph-container">
+          </div>
+        </div>
+
+        <div class="widget google-donut">
+          <button class="dots-button widget__dots-button"></button>
+          <h3 class="widget__header google-donut__header">Lorem Ipsum</h3>
+          <p class="google-donut__subheader">Dolor sit amet consectetur</p>
+          <div class="google-donut__graph-container" id="google-donut-widget">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="grid4">
+        <div class="widget simple-text-widget">
+          <h3 class="widget__header">Simple Text Widget</h3>
+          <div class="widget__text">
+            <p class="widget__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus
+              egestas
+              elit, at eleifend elit ornare ut</p>
+            <p class="widget__paragraph">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos.</p>
+          </div>
+          <button class="gradient-button simple-text-widget__button">
+            <p class="gradient-button__text">find out more</p>
+            <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
+          </button>
+        </div>
+
+        <div class="widget list-widget">
+          <h3 class="widget__header">List Widget</h3>
+          <ul class="list-widget__list">
+            <li class="list-widget__item">
+              <p class="list-widget__text">Lorem ipsum dolor</p>
+              <p class="list-widget__number">26</p>
+            </li>
+            <li class="list-widget__item">
+              <p class="list-widget__text">Curabitur eget</p>
+              <p class="list-widget__number">18</p>
+            </li>
+            <li class="list-widget__item">
+              <p class="list-widget__text">Class aptent tacti</p>
+              <p class="list-widget__number">21</p>
+            </li>
+            <li class="list-widget__item">
+              <p class="list-widget__text">Sociosqu litora</p>
+              <p class="list-widget__number">87</p>
+            </li>
+            <li class="list-widget__item">
+              <p class="list-widget__text">Torquent conubia</p>
+              <p class="list-widget__number">65</p>
+            </li>
+            <li class="list-widget__item">
+              <p class="list-widget__text">Inceptos himenaeos</p>
+              <p class="list-widget__number">21</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="widget details-widget">
+          <h3 class="widget__header">Details Widget</h3>
+
+          <ul class="details-widget__list">
+            <li class="details-widget__item ">
+              <div class="details-widget__logo icon-group"></div>
+              <div class="details-widget__text-block">
+                <h5 class="details-widget__text-header">Lorem Ipsum Dolor Amet</h5>
+                <p class="details-widget__text">Lorem Ipsum</p>
+              </div>
+            </li>
+
+            <li class="details-widget__item ">
+              <div class="details-widget__logo icon-devices"></div>
+              <div class="details-widget__text-block">
+                <h5 class="details-widget__text-header">Lorem Ipsum Dolor Amet</h5>
+                <p class="details-widget__text">Lorem Ipsum</p>
+              </div>
+            </li>
+
+            <li class="details-widget__item">
+              <div class="details-widget__logo icon-wallpaper"></div>
+              <div class="details-widget__text-block">
+                <h5 class="details-widget__text-header">Lorem Ipsum Dolor Amet</h5>
+                <p class="details-widget__text">Lorem Ipsum</p>
+              </div>
+            </li>
+          </ul>
+          <button class="gradient-button">
+            <p class="gradient-button__text">find out more</p>
+            <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
+          </button>
+        </div>
+        <div class="widget background-image-widget">
+          <button class="widget__side-button article-text-widget__side-button">
+            <div class="widget__side-button-logo icon-forum article-text-widget__side-button-logo"></div>
+            <p class="widget__side-button-text article-text-widget__side-button-text">26</p>
+          </button>
+          <p class="widget__category background-image-widget__category">category</p>
+          <h3 class="widget__header background-image-widget__header">Lorem Ipsum dolor sit amet consectetur</h3>
+          <p class="widget__date background-image-widget__date">Jan 13th, 2018</p>
+        </div>
+
+        <div class="widget person-widget">
+          <div class="person-logo__background person-widget__avatar-background">
+            <img src="./images/src/webDesignerAvatar.jpg" alt="avatar"
+              class="person-logo__image person-widget__avatar-image">
+          </div>
+          <button class="dots-button widget__dots-button"></button>
+          <p class="widget__category person-widget__category">Web Designer</p>
+          <h3 class="widget__header person-widget__name">Alejandro Suarez</h3>
+          <p class="person-widget__location">Craiova, RO</p>
+        </div>
+
+        <!--<div class="widget graph-widget">
             <button class="dots-button widget__dots-button"></button>
             <h3 class="widget__header graph-widget__header">Lorem Ipsum</h3>
             <p class="graph-widget__subheader">Dolor sit amet consectetur</p>
@@ -544,173 +545,173 @@
               </div>
           </div>-->
 
-        </div>
+      </div>
 
 
-        <div class="grid5">
-          <div class="widget article-widget">
-            <h3 class="widget__header">Article Widget</h3>
-            <ul class="article-widget__articles">
-              <li class="article-widget__article ">
-                <img src="./images/src/imagemountains.jpg" alt="" class="article-widget__article-image">
-                <div class="article-widget__article-description">
-                  <p class="widget__category">Category</p>
-                  <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
-                  <p class="widget__date">Jan 13th, 2018</p>
-                </div>
-              </li>
-              <li class="article-widget__article">
-                <img src="./images/src/imagepolice-car.jpg" alt="" class="article-widget__article-image">
-                <div class="article-widget__article-description">
-                  <p class="widget__category">Category</p>
-                  <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
-                  <p class="widget__date">Jan 13th, 2018</p>
-                </div>
-              </li>
-              <li class="article-widget__article">
-                <img src="./images/src/imagewinterMountains.jpg" alt="" class="article-widget__article-image">
-                <div class="article-widget__article-description">
-                  <p class="widget__category">Category</p>
-                  <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
-                  <p class="widget__date">Jan 13th, 2018</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="widget image-text-widget">
-            <img src="./images/src/smoker.jpg" alt="guy smoking" class="widget__top-half-image">
-            <h3 class="widget__header">Image Text Widget</h3>
-            <p class="widget__text image-text-widget__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nulla faucibus egestas
-              elit, at eleifend elit ornare ut.</p>
-            <button class="gradient-button">
-              <p class="gradient-button__text">find out more</p>
-              <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
-            </button>
-          </div>
-
-          <div class="widget article-text-widget">
-            <img src="./images/src/widgetMountainsRiverForest.jpg" alt="guy smoking" class="widget__top-half-image">
-            <div class="person-logo__background article-text-widget__avatar-background">
-              <img src="./images/src/avatar.jpg" alt="avatar"
-                class="person-logo__image article-text-widget__avatar-image">
-            </div>
-            <p class="widget__category">Lorem Ipsum</p>
-            <h3 class="widget__header">Lorem Ipsum dolor sit amet consectetur</h3>
-            <p class="widget__date">Jan 13th, 2018</p>
-            <p class="widget__text image-text-widget__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nulla faucibus egestas
-              elit, at eleifend elit ornare ut.</p>
-            <button class="gradient-button">
-              <p class="gradient-button__text">read article</p>
-              <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
-            </button>
-          </div>
-
-          <div class="widget product-review-widget">
-            <button class="widget__side-button product-review-widget__side-button">
-              <!--<div class="widget__side-button-logo icon-forum product-review-widget__side-button-logo"></div>-->
-              <p class="widget__side-button-text product-review-widget__side-button-text">$150</p>
-            </button>
-            <button class="dots-button widget__dots-button"></button>
-            <img src="./images/src/MackBook15.png" alt="" class="product-review-widget__central-image">
-            <p class="widget__category product-review-widget__category">category</p>
-            <h3 class="widget__header product-review-widget__header">MacBook Pro 15” 2017 Remake</h3>
-            <div class="stars-rating">
-              <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star1"></div>
-              <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star2"></div>
-              <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star3"></div>
-              <div class="stars-rating__star icon-star" id="star4"></div>
-              <div class="stars-rating__star icon-star" id="star5"></div>
-            </div>
-          </div>
-        </div>
-      </ul>
-    </main>
-
-    <div class="authorization-footer">
-      <div class="container">
-        <div class="authorization-footer__inner">
-          <a class="logo authorization-footer__logo" href="#">
-            <div class="logo__container">
-              <div class="logo__circle logo__first-circle"></div>
-              <div class="logo__circle logo__second-circle"></div>
-              <div class="logo__circle logo__third-circle"></div>
-              <div class="logo__circle logo__fourth-circle"></div>
-            </div>
-            <img class="logo__signature" src="../images/src/GRADA.png">
-            </img>
-          </a>
-          <nav class="menu authorization-footer__menu">
-            <ul class="menu__list  authorization-footer__menu-list">
-              <li class="menu__item menu__item_type_active">
-                <a href="#" class="menu__item-link ">home</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link">work</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link">about</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link">blog</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link">contact</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="entrance-buttons-container authorization-footer__entrance-buttons-container">
-            <button class="entrance-button">login</button>
-            <button class="entrance-button entrance-button_type_active">register</button>
-          </div>
-          <ul class="social-links authorization-footer__social-links">
-            <li class="social-links__item">
-              <div class="social-links__item-image icon-twitter"></div>
+      <div class="grid5">
+        <div class="widget article-widget">
+          <h3 class="widget__header">Article Widget</h3>
+          <ul class="article-widget__articles">
+            <li class="article-widget__article ">
+              <img src="./images/src/imagemountains.jpg" alt="" class="article-widget__article-image">
+              <div class="article-widget__article-description">
+                <p class="widget__category">Category</p>
+                <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
+                <p class="widget__date">Jan 13th, 2018</p>
+              </div>
             </li>
-            <li class="social-links__item">
-              <div class="social-links__item-image icon-fb"></div>
+            <li class="article-widget__article">
+              <img src="./images/src/imagepolice-car.jpg" alt="" class="article-widget__article-image">
+              <div class="article-widget__article-description">
+                <p class="widget__category">Category</p>
+                <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
+                <p class="widget__date">Jan 13th, 2018</p>
+              </div>
             </li>
-            <li class="social-links__item">
-              <div class="social-links__item-image icon-ball"></div>
+            <li class="article-widget__article">
+              <img src="./images/src/imagewinterMountains.jpg" alt="" class="article-widget__article-image">
+              <div class="article-widget__article-description">
+                <p class="widget__category">Category</p>
+                <h5 class="article-widget__article-header">Lorem Ipsum Dolor Amet</h5>
+                <p class="widget__date">Jan 13th, 2018</p>
+              </div>
             </li>
           </ul>
         </div>
+
+        <div class="widget image-text-widget">
+          <img src="./images/src/smoker.jpg" alt="guy smoking" class="widget__top-half-image">
+          <h3 class="widget__header">Image Text Widget</h3>
+          <p class="widget__text image-text-widget__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nulla faucibus egestas
+            elit, at eleifend elit ornare ut.</p>
+          <button class="gradient-button">
+            <p class="gradient-button__text">find out more</p>
+            <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
+          </button>
+        </div>
+
+        <div class="widget article-text-widget">
+          <img src="./images/src/widgetMountainsRiverForest.jpg" alt="guy smoking" class="widget__top-half-image">
+          <div class="person-logo__background article-text-widget__avatar-background">
+            <img src="./images/src/avatar.jpg" alt="avatar"
+              class="person-logo__image article-text-widget__avatar-image">
+          </div>
+          <p class="widget__category">Lorem Ipsum</p>
+          <h3 class="widget__header">Lorem Ipsum dolor sit amet consectetur</h3>
+          <p class="widget__date">Jan 13th, 2018</p>
+          <p class="widget__text image-text-widget__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nulla faucibus egestas
+            elit, at eleifend elit ornare ut.</p>
+          <button class="gradient-button">
+            <p class="gradient-button__text">read article</p>
+            <div class="gradient-button__icon icon-keyboard_arrow_right"></div>
+          </button>
+        </div>
+
+        <div class="widget product-review-widget">
+          <button class="widget__side-button product-review-widget__side-button">
+            <!--<div class="widget__side-button-logo icon-forum product-review-widget__side-button-logo"></div>-->
+            <p class="widget__side-button-text product-review-widget__side-button-text">$150</p>
+          </button>
+          <button class="dots-button widget__dots-button"></button>
+          <img src="./images/src/MackBook15.png" alt="" class="product-review-widget__central-image">
+          <p class="widget__category product-review-widget__category">category</p>
+          <h3 class="widget__header product-review-widget__header">MacBook Pro 15” 2017 Remake</h3>
+          <div class="stars-rating">
+            <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star1"></div>
+            <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star2"></div>
+            <div class="stars-rating__star stars-rating__star_type_active icon-star" id="star3"></div>
+            <div class="stars-rating__star icon-star" id="star4"></div>
+            <div class="stars-rating__star icon-star" id="star5"></div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </main>
+
+  <div class="authorization-footer">
+    <div class="container">
+      <div class="authorization-footer__inner">
+        <a class="logo authorization-footer__logo" href="#">
+          <div class="logo__container">
+            <div class="logo__circle logo__first-circle"></div>
+            <div class="logo__circle logo__second-circle"></div>
+            <div class="logo__circle logo__third-circle"></div>
+            <div class="logo__circle logo__fourth-circle"></div>
+          </div>
+          <img class="logo__signature" src="../images/src/GRADA.png">
+          </img>
+        </a>
+        <nav class="menu authorization-footer__menu">
+          <ul class="menu__list  authorization-footer__menu-list">
+            <li class="menu__item menu__item_type_active">
+              <a href="#" class="menu__item-link ">home</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">work</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">about</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">blog</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="entrance-buttons-container authorization-footer__entrance-buttons-container">
+          <button class="entrance-button">login</button>
+          <button class="entrance-button entrance-button_type_active">register</button>
+        </div>
+        <ul class="social-links authorization-footer__social-links">
+          <li class="social-links__item">
+            <div class="social-links__item-image icon-twitter"></div>
+          </li>
+          <li class="social-links__item">
+            <div class="social-links__item-image icon-fb"></div>
+          </li>
+          <li class="social-links__item">
+            <div class="social-links__item-image icon-ball"></div>
+          </li>
+        </ul>
       </div>
     </div>
-    <footer class="footer footer_type_logged">
-      <div class="container">
-        <div class="footer__inner">
-          <p class="copyright">Copyright © 2018 Grada. All rights reserved.</p>
-          <a class="logo footer__logo" href="#">
-            <div class="logo__container">
-              <div class="logo__circle logo__first-circle"></div>
-              <div class="logo__circle logo__second-circle"></div>
-              <div class="logo__circle logo__third-circle"></div>
-              <div class="logo__circle logo__fourth-circle"></div>
-            </div>
-          </a>
-          <ul class="social-links footer__social-links">
-            <li class="social-links__item">
-              <div class="social-links__item-image icon-twitter"></div>
-            </li>
-            <li class="social-links__item">
-              <div class="social-links__item-image icon-fb"></div>
-            </li>
-            <li class="social-links__item">
-              <div class="social-links__item-image icon-ball"></div>
-            </li>
-            <li class="social-links__item">
-              <div class="social-links__item-image icon-github"></div>
-            </li>
-            <li class="social-links__item">
-              <div class="social-links__item-image icon-gplus"></div>
-            </li>
-          </ul>
-        </div>
+  </div>
+  <footer class="footer footer_type_logged">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="copyright">Copyright © 2018 Grada. All rights reserved.</p>
+        <a class="logo footer__logo" href="#">
+          <div class="logo__container">
+            <div class="logo__circle logo__first-circle"></div>
+            <div class="logo__circle logo__second-circle"></div>
+            <div class="logo__circle logo__third-circle"></div>
+            <div class="logo__circle logo__fourth-circle"></div>
+          </div>
+        </a>
+        <ul class="social-links footer__social-links">
+          <li class="social-links__item">
+            <div class="social-links__item-image icon-twitter"></div>
+          </li>
+          <li class="social-links__item">
+            <div class="social-links__item-image icon-fb"></div>
+          </li>
+          <li class="social-links__item">
+            <div class="social-links__item-image icon-ball"></div>
+          </li>
+          <li class="social-links__item">
+            <div class="social-links__item-image icon-github"></div>
+          </li>
+          <li class="social-links__item">
+            <div class="social-links__item-image icon-gplus"></div>
+          </li>
+        </ul>
       </div>
-    </footer>
+    </div>
+  </footer>
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=fce329b4-5dcd-4234-8c4d-214474093353&lang=ru_RU"
     type="text/javascript"></script>
